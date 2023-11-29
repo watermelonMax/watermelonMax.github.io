@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>new on Blowfish</title>
+    <title>new on Morning</title>
     <link>https://watermelonmax.github.io/tags/new/</link>
-    <description>Recent content in new on Blowfish</description>
+    <description>Recent content in new on Morning</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2023 Blowfish</copyright>
-    <lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/tags/new/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2023 Morning</copyright>
+    <lastBuildDate>Tue, 28 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/tags/new/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>配置github blog</title>
+      <link>https://watermelonmax.github.io/docs/configure/</link>
+      <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://watermelonmax.github.io/docs/configure/</guid>
+      <description>本地调试 # 在发布到网站前可以在本地预览网站或内容的效果，运行命令： hugo server
+hugo server 运行成功后，可以在 http://localhost:1313/ 中预览网站 发布内容 # hugo 命令可以将你写的 Markdown 文件生成静态 HTML 网页，生成的 HTML 文件默认存放在 public 文件夹中。 推送博客源仓库的 public 文件夹中的 HTML 网页文件到 GitHub Pages 仓库 中</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/docs/configure/featured.jpg" />
+    </item>
+    
     <item>
       <title>Welcome to Blowfish</title>
       <link>https://watermelonmax.github.io/docs/welcome/</link>

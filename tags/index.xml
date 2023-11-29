@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Blowfish</title>
+    <title>Tags on Morning</title>
     <link>https://watermelonmax.github.io/tags/</link>
-    <description>Recent content in Tags on Blowfish</description>
+    <description>Recent content in Tags on Morning</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2023 Blowfish</copyright>
-    <lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2023 Morning</copyright>
+    <lastBuildDate>Tue, 28 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>docs</title>
       <link>https://watermelonmax.github.io/tags/docs/</link>
-      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://watermelonmax.github.io/tags/docs/</guid>
       <description></description>
@@ -21,7 +21,7 @@
     <item>
       <title>new</title>
       <link>https://watermelonmax.github.io/tags/new/</link>
-      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://watermelonmax.github.io/tags/new/</guid>
       <description></description>
