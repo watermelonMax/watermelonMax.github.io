@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 Morning</copyright>
-    <lastBuildDate>Tue, 28 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cs</title>
+      <link>https://watermelonmax.github.io/tags/cs/</link>
+      <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://watermelonmax.github.io/tags/cs/</guid>
+      <description></description>
+      
+    </item>
+    
     <item>
       <title>docs</title>
       <link>https://watermelonmax.github.io/tags/docs/</link>
@@ -24,6 +34,46 @@
       <pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate>
       
       <guid>https://watermelonmax.github.io/tags/new/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>chart</title>
+      <link>https://watermelonmax.github.io/tags/chart/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://watermelonmax.github.io/tags/chart/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>graph</title>
+      <link>https://watermelonmax.github.io/tags/graph/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://watermelonmax.github.io/tags/graph/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>sample</title>
+      <link>https://watermelonmax.github.io/tags/sample/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://watermelonmax.github.io/tags/sample/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>shortcodes</title>
+      <link>https://watermelonmax.github.io/tags/shortcodes/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://watermelonmax.github.io/tags/shortcodes/</guid>
       <description></description>
       
     </item>

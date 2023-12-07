@@ -6,13 +6,11 @@
   
     
       <url>
-            <loc>https://watermelonmax.github.io/docs/</loc>
-            <lastmod>2023-11-28T00:00:00+00:00</lastmod>
+            <loc>https://watermelonmax.github.io/cs-/</loc>
+            <lastmod>2023-12-07T00:00:00+00:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
-    
-  
     
   
     
@@ -20,10 +18,32 @@
     
       <url>
             <loc>https://watermelonmax.github.io/</loc>
+            <lastmod>2023-12-07T00:00:00+00:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://watermelonmax.github.io/cs-/lecture/</loc>
+            <lastmod>2023-12-07T00:00:00+00:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://watermelonmax.github.io/docs/</loc>
             <lastmod>2023-11-28T00:00:00+00:00</lastmod>
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
+    
+  
     
   
     
@@ -42,6 +62,32 @@
             <changefreq>always</changefreq>
             <priority>0.5</priority>
           </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://watermelonmax.github.io/samples/charts/</loc>
+            <lastmod>2019-03-06T00:00:00+00:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://watermelonmax.github.io/samples/</loc>
+            <lastmod>2019-03-06T00:00:00+00:00</lastmod>
+            <changefreq>always</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
     
   
     

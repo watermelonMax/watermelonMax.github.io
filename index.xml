@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2023 Morning</copyright>
-    <lastBuildDate>Tue, 28 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>配置github blog</title>
       <link>https://watermelonmax.github.io/docs/configure/</link>
@@ -27,6 +27,16 @@ hugo server 运行成功后，可以在 http://localhost:1313/ 中预览网站 �
       <guid>https://watermelonmax.github.io/docs/welcome/</guid>
       <description>Blowfish is packed with tons of features. The original aim of Blowfish was to develop a theme that was simple and lightweight. The theme is a fork of Congo and expands its initial vision.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/docs/welcome/featured.png" />
+    </item>
+    
+    <item>
+      <title>Charts</title>
+      <link>https://watermelonmax.github.io/samples/charts/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://watermelonmax.github.io/samples/charts/</guid>
+      <description>Blowfish includes Chart.js for powerful charts and data visualisations.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/samples/charts/featured.jpg" />
     </item>
     
   </channel>

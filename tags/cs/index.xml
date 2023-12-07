@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cs on Morning</title>
+    <link>https://watermelonmax.github.io/tags/cs/</link>
+    <description>Recent content in cs on Morning</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2023 Morning</copyright>
+    <lastBuildDate>Thu, 07 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>课堂笔记</title>
+      <link>https://watermelonmax.github.io/cs-/lecture/</link>
+      <pubDate>Thu, 07 Dec 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://watermelonmax.github.io/cs-/lecture/</guid>
+      <description>.</description>
+      
+    </item>
+    
+  </channel>
+</rss>
