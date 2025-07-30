@@ -3,20 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://example.org/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <loc>https://watermelonmax.github.io/posts/first/</loc>
+    <lastmod>2025-07-29T14:00:17+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <loc>https://watermelonmax.github.io/posts/project/</loc>
+    <lastmod>2025-07-29T14:00:17+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/1753676583836-welcom/</loc>
-    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <loc>https://watermelonmax.github.io/</loc>
+    <lastmod>2025-07-29T14:00:17+08:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://watermelonmax.github.io/posts/</loc>
+    <lastmod>2025-07-29T14:00:17+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
