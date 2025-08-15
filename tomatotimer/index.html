@@ -592,7 +592,14 @@
     <audio id="rp-audio" controls preload="none" class="rp-audio"></audio>
   </div>
 </div>
-
+<div class="rp-bottom-progress" id="rp-bottom-progress">
+  <div class="rp-bottom-row">
+    <span class="rp-bottom-time" id="rp-prog-time">00:00 / 40:00</span>
+  </div>
+  <div class="rp-bottom-track">
+    <div class="rp-bottom-fill" id="rp-prog-fill" style="width:0%"></div>
+  </div>
+</div>
 <script>
   
   window.RP_IMAGES = ["\/media\/images\/1.jpeg"];
@@ -608,7 +615,7 @@
     const btnNextImg = document.getElementById('rp-next-img');
     const btnNextSong= document.getElementById('rp-next-song');
 
-    audio.setAttribute('playsinline','');
+    audio.setAttribute('playsinline',''); 
     audio.muted = false;
     audio.volume = 1.0;
 
@@ -639,16 +646,20 @@
       if(!imgs.length){ status('未找到图片：static/media/images'); return; }
       if(iIdx >= imgs.length){ shuffle(imgs); iIdx = 0; }
       const url = imgs[iIdx++];
-      wrap.style.backgroundImage = `url('${url}')`;
-      wrap.style.backgroundSize = 'cover';
-      wrap.style.backgroundPosition = 'center';
+      document.body.style.backgroundImage = `url('${url}')`;
+      document.body.style.backgroundSize = 'cover';
+      document.body.style.backgroundPosition = 'center';
+      document.body.style.backgroundAttachment = 'fixed'; 
       status('背景：' + prettifyName(url));
     }
-
+    
     function nextSong(autoplay=true){
       if(!songs.length){ status('未找到歌曲：static/media/music'); return; }
       if(sIdx >= songs.length){ shuffle(songs); sIdx = 0; }
-      const url = songs[sIdx++];
+      let url = songs[sIdx++]; 
+      
+      url += (url.includes('?') ? '&' : '?') + 'v=' + Date.now();
+
       audio.src = url;
       title.textContent = prettifyName(url);
 
@@ -670,6 +681,7 @@
       }
       nextImage();
       nextSong(true);
+      if(!pTimer) startProgress(); 
     }
 
     btnStart.addEventListener('click', start);
@@ -683,8 +695,67 @@
       status(`音频错误：${map[code] || '未知错误'}`);
       console.error('Audio error', audio.error, 'src=', audio.src);
     });
+        
+    
+    const P_SECONDS = 40 * 60; 
+    const progWrap = document.getElementById('rp-bottom-progress');
+    const progTime = document.getElementById('rp-prog-time');
+    const progFill = document.getElementById('rp-prog-fill');
+
+    let pStart = null;   
+    let pAccum = 0;      
+    let pTimer = null;   
+
+    function fmt(ss){
+      ss = Math.max(0, Math.floor(ss));
+      const m = String(Math.floor(ss/60)).padStart(2,'0');
+      const s = String(ss%60).padStart(2,'0');
+      return `${m}:${s}`;
+    }
+    function elapsed(){
+      const run = pStart ? (Date.now() - pStart)/1000 : 0;
+      return Math.min(P_SECONDS, pAccum + run);
+    }
+    function renderProgress(){
+      const e = elapsed();
+      const pct = (e / P_SECONDS) * 100;
+      if (progFill) progFill.style.width = `${pct}%`;
+      if (progTime) progTime.textContent = `${fmt(e)} / ${fmt(P_SECONDS)}`;
+    }
+    function tick(){
+      renderProgress();
+      if(elapsed() >= P_SECONDS){
+        completeProgress();
+      }
+    }
+    function startProgress(){
+      if(pTimer) return;
+      if(!pStart) pStart = Date.now();
+      pTimer = setInterval(tick, 1000);
+      renderProgress();
+    }
+    function resetProgress(){
+      if(pTimer){ clearInterval(pTimer); pTimer = null; }
+      pStart = null; pAccum = 0;
+      renderProgress();
+    }
+    function completeProgress(){
+      
+      renderProgress();
+      clearInterval(pTimer); pTimer = null;
+      nextImage();
+      nextSong(true);
+      resetProgress();
+      startProgress();
+    }
+
+    
+    renderProgress();
+    btnStart.addEventListener('click', () => { if(!pTimer) startProgress(); });
   })();
 </script>
+
+
 
 <style>
   .rp-wrap{
@@ -706,6 +777,34 @@
   .rp-btn:active{ transform: translateY(0); opacity: .85; }
   .rp-btn.rp-ghost{ background: rgba(255,255,255,.2); color: #fff; border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(6px); }
   .rp-audio{ width: 100%; max-width: 680px; background: rgba(0,0,0,.3); border-radius: 12px; }
+
+   
+  .rp-bottom-progress{
+    position: fixed; top: 80%; left: 50%;
+    left: 0; right: 0; bottom: 0;
+    z-index: 2147483647;
+    padding: 10px 14px;
+    background: rgba(20,20,20,0.75);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 -6px 20px rgba(0,0,0,.2);
+  }
+  .rp-bottom-row{
+    max-width: 980px;
+    margin: 0 auto 6px auto;
+    color: #fff; display: flex; justify-content: flex-end;
+    font-size: 13px; opacity: .95;
+  }
+  .rp-bottom-track{
+    max-width: 980px;
+    margin: 0 auto;
+    height: 10px; border-radius: 999px;
+    background: rgba(255,255,255,.25); overflow: hidden;
+  }
+  .rp-bottom-fill{
+    height: 100%; width: 0%;
+    background: linear-gradient(90deg, #fff, #eaeaea);
+    transition: width .3s ease;
+  }
 </style>
 
 
