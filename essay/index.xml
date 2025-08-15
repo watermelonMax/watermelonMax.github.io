@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随笔们  on 悉达多</title>
+    <link>http://localhost:1313/essay/</link>
+    <description>Recent content in 随笔们  on 悉达多</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>@example.com (Your name here)</managingEditor>
+    <webMaster>@example.com (Your name here)</webMaster>
+    <copyright>© 2025 Your name here</copyright>
+    <lastBuildDate>Sat, 02 Aug 2025 12:00:17 +1300</lastBuildDate><atom:link href="http://localhost:1313/essay/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>去看眼科</title>
+      <link>http://localhost:1313/essay/first/</link>
+      <pubDate>Sat, 02 Aug 2025 12:00:17 +1300</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>http://localhost:1313/essay/first/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/essay/first/featured.png" />
+    </item>
+    
+  </channel>
+</rss>
