@@ -3,43 +3,43 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>http://localhost:1313/posts/mlwc/</loc>
+    <loc>https://watermelonmax.github.io/posts/mlwc/</loc>
     <lastmod>2025-08-06T12:22:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://watermelonmax.github.io/</loc>
     <lastmod>2025-08-06T12:22:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://watermelonmax.github.io/posts/</loc>
     <lastmod>2025-08-06T12:22:00+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/essay/first/</loc>
+    <loc>https://watermelonmax.github.io/essay/first/</loc>
     <lastmod>2025-08-02T12:00:17+13:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/essay/</loc>
+    <loc>https://watermelonmax.github.io/essay/</loc>
     <lastmod>2025-08-02T12:00:17+13:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/posts/project/</loc>
+    <loc>https://watermelonmax.github.io/posts/project/</loc>
     <lastmod>2025-07-29T14:00:17+08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/tomatotimer/</loc>
+    <loc>https://watermelonmax.github.io/tomatotimer/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

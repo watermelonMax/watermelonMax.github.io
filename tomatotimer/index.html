@@ -4,7 +4,7 @@
   dir="ltr"
   class="scroll-smooth"
   data-default-appearance="light"
-  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  data-auto-appearance="true"><head>
   <meta charset="utf-8">
   
     <meta http-equiv="content-language" content="en">
@@ -22,7 +22,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/tomatotimer/">
+  <link rel="canonical" href="https://watermelonmax.github.io/tomatotimer/">
   
       <link rel="alternate" type="application/rss+xml" href="/tomatotimer/index.xml" title="悉达多" />
   
@@ -96,7 +96,7 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/tomatotimer/">
+  <meta property="og:url" content="https://watermelonmax.github.io/tomatotimer/">
   <meta property="og:site_name" content="悉达多">
   <meta property="og:title" content="随机音乐与图片">
   <meta property="og:description" content="My awesome website">
@@ -590,6 +590,7 @@
     </div>
 
     <audio id="rp-audio" controls preload="none" class="rp-audio"></audio>
+    
   </div>
 </div>
 <div class="rp-bottom-progress" id="rp-bottom-progress">
@@ -763,10 +764,10 @@
     border-radius: 1rem;
     overflow: hidden;
     min-height: 52vh;
-    background-color: #222;
-    box-shadow: 0 10px 30px rgba(0,0,0,.15);
+    background-color: transparent !important;
+    box-shadow: none !important;
   }
-  .rp-overlay{ position:absolute; inset:0; background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.55)); }
+  .rp-overlay{ display: none !important; }
   .rp-panel{ position: relative; z-index: 1; color: #fff; padding: clamp(16px, 4vw, 32px); display: grid; gap: 16px; max-width: 860px; margin: 0 auto; }
   .rp-now{ display: grid; gap: 6px; }
   .rp-title{ font-size: clamp(20px, 3.2vw, 28px); font-weight: 700; }
@@ -776,8 +777,8 @@
   .rp-btn:hover{ transform: translateY(-1px); }
   .rp-btn:active{ transform: translateY(0); opacity: .85; }
   .rp-btn.rp-ghost{ background: rgba(255,255,255,.2); color: #fff; border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(6px); }
-  .rp-audio{ width: 100%; max-width: 680px; background: rgba(0,0,0,.3); border-radius: 12px; }
-
+  .rp-audio{ width: 100%; max-width: 480px; height: 32px; background: none; border-radius: 10px;border: none; }
+   
    
   .rp-bottom-progress{
     position: fixed; top: 80%; left: 50%;
@@ -882,7 +883,7 @@
 <div
   id="search-wrapper"
   class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
-  data-url="http://localhost:1313/">
+  data-url="https://watermelonmax.github.io/">
   <div
     id="search-modal"
     class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
