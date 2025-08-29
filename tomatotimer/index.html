@@ -14,8 +14,8 @@
   <meta name="theme-color">
 
   
-  <title>随机音乐与图片 &middot; 悉达多</title>
-    <meta name="title" content="随机音乐与图片 &middot; 悉达多">
+  <title>TomatoTimers &middot; 悉达多</title>
+    <meta name="title" content="TomatoTimers &middot; 悉达多">
 
   
   <meta name="description" content="My awesome website">
@@ -98,14 +98,14 @@
   
   <meta property="og:url" content="https://watermelonmax.github.io/tomatotimer/">
   <meta property="og:site_name" content="悉达多">
-  <meta property="og:title" content="随机音乐与图片">
+  <meta property="og:title" content="TomatoTimers">
   <meta property="og:description" content="My awesome website">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="website">
 
   
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="随机音乐与图片">
+  <meta name="twitter:title" content="TomatoTimers">
   <meta name="twitter:description" content="My awesome website">
 
   
@@ -253,7 +253,7 @@
   
   class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
   
-  <p class="text-base font-medium" title="随机音乐与图片">
+  <p class="text-base font-medium" title="TomatoTimers">
     番茄时间
   </p>
 </a>
@@ -442,7 +442,7 @@
     
     class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
     
-    <p class="text-bg font-bg" title="随机音乐与图片">
+    <p class="text-bg font-bg" title="TomatoTimers">
       番茄时间
     </p>
   </a>
@@ -528,7 +528,7 @@
 
  <header>
   
-  <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">随机音乐与图片</h1>
+  <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">TomatoTimers</h1>
   <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
     
 
@@ -561,281 +561,260 @@
   </div>
   
   
-    
-    
-      
-      
-    
-  
-  
-  <script type="text/javascript" src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js" integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA==" data-oid="views_tomatoTimer/_index.md" data-oid-likes="likes_tomatoTimer/_index.md"></script>
-  
   </header>
   <section class="mt-0 prose flex max-w-full flex-col dark:prose-invert lg:flex-row">
     
     <div class="min-w-0 min-h-0 max-w-prose">
-      <div class="rp-wrap" id="rp-wrap">
-  <div class="rp-overlay"></div>
-
-  <div class="rp-panel">
-    <div class="rp-now">
-      <div class="rp-title" id="rp-title">未播放</div>
-      <div class="rp-sub" id="rp-sub">点击「开始随机」</div>
-    </div>
-
-    <div class="rp-controls">
-      <button id="rp-start" class="rp-btn">开始随机</button>
-      <button id="rp-next-img" class="rp-btn rp-ghost">换背景</button>
-      <button id="rp-next-song" class="rp-btn rp-ghost">换歌曲</button>
-    </div>
-
-    <audio id="rp-audio" controls preload="none" class="rp-audio"></audio>
-    
-  </div>
-</div>
-<div class="rp-bottom-progress" id="rp-bottom-progress">
-  <div class="rp-bottom-row">
-    <span class="rp-bottom-time" id="rp-prog-time">00:00 / 40:00</span>
-  </div>
-  <div class="rp-bottom-track">
-    <div class="rp-bottom-fill" id="rp-prog-fill" style="width:0%"></div>
-  </div>
-</div>
-<script>
-  
-  window.RP_IMAGES = ["\/media\/images\/1.jpeg"];
-  window.RP_TRACKS = ["\/media\/music\/1.mp3"];
-
-  (function () {
-    const wrap  = document.getElementById('rp-wrap');
-    const title = document.getElementById('rp-title');
-    const sub   = document.getElementById('rp-sub');
-    const audio = document.getElementById('rp-audio');
-
-    const btnStart   = document.getElementById('rp-start');
-    const btnNextImg = document.getElementById('rp-next-img');
-    const btnNextSong= document.getElementById('rp-next-song');
-
-    audio.setAttribute('playsinline',''); 
-    audio.muted = false;
-    audio.volume = 1.0;
-
-    const imgs  = [...(window.RP_IMAGES || [])];
-    const songs = [...(window.RP_TRACKS || [])];
-
-    function shuffle(arr){
-      for(let i = arr.length - 1; i > 0; i--){
-        const j = Math.floor(Math.random()*(i+1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-    let iIdx = 0, sIdx = 0;
-    shuffle(imgs); shuffle(songs);
-
-    function prettifyName(p){
-      try{
-        const file = p.split('/').pop();
-        const noext = file.replace(/\.[^.]+$/, '');
-        return decodeURIComponent(noext).replace(/[_\-]+/g,' ').trim();
-      }catch{ return p; }
-    }
-
-    function status(msg){ sub.textContent = msg; }
-
-    function nextImage(){
-      if(!imgs.length){ status('未找到图片：static/media/images'); return; }
-      if(iIdx >= imgs.length){ shuffle(imgs); iIdx = 0; }
-      const url = imgs[iIdx++];
-      document.body.style.backgroundImage = `url('${url}')`;
-      document.body.style.backgroundSize = 'cover';
-      document.body.style.backgroundPosition = 'center';
-      document.body.style.backgroundAttachment = 'fixed'; 
-      status('背景：' + prettifyName(url));
-    }
-    
-    function nextSong(autoplay=true){
-      if(!songs.length){ status('未找到歌曲：static/media/music'); return; }
-      if(sIdx >= songs.length){ shuffle(songs); sIdx = 0; }
-      let url = songs[sIdx++]; 
       
-      url += (url.includes('?') ? '&' : '?') + 'v=' + Date.now();
+    </div>
 
-      audio.src = url;
-      title.textContent = prettifyName(url);
 
-      if(autoplay){
-        audio.play().then(()=>{
-          status('正在播放：' + prettifyName(url));
-        }).catch((e)=>{
-          status('需要先点击“开始随机” / 或查看控制台错误');
-          console.warn('audio.play() 失败：', e, ' src=', url);
-        });
-      }
-    }
 
-    function start(){
-      if(!imgs.length && !songs.length){
-        title.textContent = '没有可用的图片或歌曲';
-        status('请把文件放到 /static/media/images 与 /static/media/music');
-        return;
-      }
-      nextImage();
-      nextSong(true);
-      if(!pTimer) startProgress(); 
-    }
 
-    btnStart.addEventListener('click', start);
-    btnNextImg.addEventListener('click', nextImage);
-    btnNextSong.addEventListener('click', ()=> nextSong(true));
-    audio.addEventListener('ended', ()=> nextSong(true));
+  </section>
+  
 
-    audio.addEventListener('error', () => {
-      const code = audio.error && audio.error.code;
-      const map = {1:'用户终止',2:'网络错误(可能404)',3:'解码失败(格式不支持/损坏)',4:'不支持的格式'};
-      status(`音频错误：${map[code] || '未知错误'}`);
-      console.error('Audio error', audio.error, 'src=', audio.src);
-    });
+    
+    
+    
+    
+    
+
+    
+
+    <section class="space-y-10 w-full">
+      
         
-    
-    const P_SECONDS = 40 * 60; 
-    const progWrap = document.getElementById('rp-bottom-progress');
-    const progTime = document.getElementById('rp-prog-time');
-    const progFill = document.getElementById('rp-prog-fill');
+        
+        <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+          0001
+        </h2>
+        
+        
+        
 
-    let pStart = null;   
-    let pAccum = 0;      
-    let pTimer = null;   
 
-    function fmt(ss){
-      ss = Math.max(0, Math.floor(ss));
-      const m = String(Math.floor(ss/60)).padStart(2,'0');
-      const s = String(ss%60).padStart(2,'0');
-      return `${m}:${s}`;
-    }
-    function elapsed(){
-      const run = pStart ? (Date.now() - pStart)/1000 : 0;
-      return Math.min(P_SECONDS, pAccum + run);
-    }
-    function renderProgress(){
-      const e = elapsed();
-      const pct = (e / P_SECONDS) * 100;
-      if (progFill) progFill.style.width = `${pct}%`;
-      if (progTime) progTime.textContent = `${fmt(e)} / ${fmt(P_SECONDS)}`;
-    }
-    function tick(){
-      renderProgress();
-      if(elapsed() >= P_SECONDS){
-        completeProgress();
-      }
-    }
-    function startProgress(){
-      if(pTimer) return;
-      if(!pStart) pStart = Date.now();
-      pTimer = setInterval(tick, 1000);
-      renderProgress();
-    }
-    function resetProgress(){
-      if(pTimer){ clearInterval(pTimer); pTimer = null; }
-      pStart = null; pAccum = 0;
-      renderProgress();
-    }
-    function completeProgress(){
+
+  
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+<a class="flex flex-wrap md:flex-nowrap article " 
+  href="/tomatotimer/first/">
+        
+        <div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/tomatotimer/first/featured_hu_fb05bb9d2236dc8f.jpg);"></div>
+        
+      <div class=" mt-3 md:mt-0">
+    <div class="items-center text-left text-xl font-semibold">
       
-      renderProgress();
-      clearInterval(pTimer); pTimer = null;
-      nextImage();
-      nextSong(true);
-      resetProgress();
-      startProgress();
-    }
+        <div
+          class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/tomatotimer/first/">
+          随机音乐与图片
+        </div>
+      
+      
+      
+    </div>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+    
 
     
-    renderProgress();
-    btnStart.addEventListener('click', () => { if(!pTimer) startProgress(); });
-  })();
-</script>
+    
+  </div>
 
+  
 
+  
+  
 
-<style>
-  .rp-wrap{
-    position: relative;
-    border-radius: 1rem;
-    overflow: hidden;
-    min-height: 52vh;
-    background-color: transparent !important;
-    box-shadow: none !important;
-  }
-  .rp-overlay{ display: none !important; }
-  .rp-panel{ position: relative; z-index: 1; color: #fff; padding: clamp(16px, 4vw, 32px); display: grid; gap: 16px; max-width: 860px; margin: 0 auto; }
-  .rp-now{ display: grid; gap: 6px; }
-  .rp-title{ font-size: clamp(20px, 3.2vw, 28px); font-weight: 700; }
-  .rp-sub{ opacity: .9; font-size: 14px; }
-  .rp-controls{ display: flex; gap: 10px; flex-wrap: wrap; }
-  .rp-btn{ appearance: none; border: none; cursor: pointer; padding: 10px 14px; border-radius: 999px; font-weight: 600; background: rgba(255,255,255,.92); color: #111; transition: transform .08s ease, opacity .2s ease, background .2s ease; }
-  .rp-btn:hover{ transform: translateY(-1px); }
-  .rp-btn:active{ transform: translateY(0); opacity: .85; }
-  .rp-btn.rp-ghost{ background: rgba(255,255,255,.2); color: #fff; border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(6px); }
-  .rp-audio{ width: 100%; max-width: 480px; height: 32px; background: none; border-radius: 10px;border: none; }
-   
-   
-  .rp-bottom-progress{
-    position: fixed; top: 80%; left: 50%;
-    left: 0; right: 0; bottom: 0;
-    z-index: 2147483647;
-    padding: 10px 14px;
-    background: rgba(20,20,20,0.75);
-    backdrop-filter: blur(6px);
-    box-shadow: 0 -6px 20px rgba(0,0,0,.2);
-  }
-  .rp-bottom-row{
-    max-width: 980px;
-    margin: 0 auto 6px auto;
-    color: #fff; display: flex; justify-content: flex-end;
-    font-size: 13px; opacity: .95;
-  }
-  .rp-bottom-track{
-    max-width: 980px;
-    margin: 0 auto;
-    height: 10px; border-radius: 999px;
-    background: rgba(255,255,255,.25); overflow: hidden;
-  }
-  .rp-bottom-fill{
-    height: 100%; width: 0%;
-    background: linear-gradient(90deg, #fff, #eaeaea);
-    transition: width .3s ease;
-  }
-</style>
+  
+  
+
 
 
     </div>
+    
+  </div>
+</a>
+
+        
+        
 
 
 
-
-  </section>
   
-  <section class="mt-10 prose dark:prose-invert">
-    <p class="py-8 border-t">
-      <em>There are no articles to list here yet.</em>
-    </p>
-  </section>
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+<a class="flex flex-wrap md:flex-nowrap article " 
+  href="/tomatotimer/sec/">
+        
+        <div class="w-full md:w-auto h-full thumbnail nozoom thumbnailshadow md:mr-7" style="background-image:url(/tomatotimer/sec/featured_hu_fb05bb9d2236dc8f.jpg);"></div>
+        
+      <div class=" mt-3 md:mt-0">
+    <div class="items-center text-left text-xl font-semibold">
+      
+        <div
+          class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/tomatotimer/sec/">
+          赵的Tomate
+        </div>
+      
+      
+      
+    </div>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+    </div>
+    
+  </div>
+</a>
+
+        
+        
+      
+    </section>
+
+    
+
   
 
     
 
   
-        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
-  <a
-    href="#the-top"
-    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
-    aria-label="Scroll to top"
-    title="Scroll to top">
-    &uarr;
-  </a>
-</div>
-
+        
       </main><footer id="site-footer" class="py-10 print:hidden">
   
   

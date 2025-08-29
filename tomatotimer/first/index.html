@@ -14,17 +14,15 @@
   <meta name="theme-color">
 
   
-  <title>Series &middot; 悉达多</title>
-    <meta name="title" content="Series &middot; 悉达多">
+  <title>随机音乐与图片 &middot; 悉达多</title>
+    <meta name="title" content="随机音乐与图片 &middot; 悉达多">
 
   
   <meta name="description" content="My awesome website">
   
   
   
-  <link rel="canonical" href="https://watermelonmax.github.io/series/">
-  
-      <link rel="alternate" type="application/rss+xml" href="/series/index.xml" title="悉达多" />
+  <link rel="canonical" href="https://watermelonmax.github.io/tomatotimer/first/">
   
   
   
@@ -96,19 +94,50 @@
   
 
   
-  <meta property="og:url" content="https://watermelonmax.github.io/series/">
+  <meta property="og:url" content="https://watermelonmax.github.io/tomatotimer/first/">
   <meta property="og:site_name" content="悉达多">
-  <meta property="og:title" content="Series">
+  <meta property="og:title" content="随机音乐与图片">
   <meta property="og:description" content="My awesome website">
   <meta property="og:locale" content="en">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="tomatotimer">
+    <meta property="og:image" content="https://watermelonmax.github.io/tomatotimer/first/featured.jpg">
 
   
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Series">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://watermelonmax.github.io/tomatotimer/first/featured.jpg">
+  <meta name="twitter:title" content="随机音乐与图片">
   <meta name="twitter:description" content="My awesome website">
+<meta name="twitter:image" content="https://watermelonmax.github.io/tomatotimer/first/featured.jpg">
+    <meta property="og:image" content="https://watermelonmax.github.io/tomatotimer/first/featured.jpg">
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "TomatoTimers",
+    "name": "随机音乐与图片",
+    "headline": "随机音乐与图片",
+    
+    
+    "inLanguage": "en",
+    "url" : "https:\/\/watermelonmax.github.io\/tomatotimer\/first\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Your name here"
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "12"
+  }]
+  </script>
 
-  
 
 
   
@@ -525,14 +554,19 @@
       <main id="main-content" class="grow">
         
   
-  
 
 
-  <header>
+  <article>
     
-    <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Series</h1>
-    <div class="mt-1 mb-2 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+
+
+    <header id="single_header" class="mt-5 max-w-prose">
       
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        随机音乐与图片
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
 
 
 
@@ -542,6 +576,27 @@
   
 
 
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
 
   
 
@@ -557,22 +612,662 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
+      <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+    
+
+    
+    
   </div>
 
-
-    </div>
-  </header>
   
 
   
+  
 
-    <section class="flex flex-wrap max-w-prose -mx-2 overflow-hidden">
+  
+  
+
+
+
+      </div>
+
       
-    </section>
-  
+      
+      
+      
+      
 
+      
+
+      
 
         
+
+        
+
+        
+
+      
+
+    </header>
+
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+
+<div class="rp-wrap" id="rp-wrap">
+  <div class="rp-overlay"></div>
+
+  <div class="rp-panel">
+    <div class="rp-now">
+      <div class="rp-title" id="rp-title">未播放</div>
+      <div class="rp-sub" id="rp-sub">点击「开始随机」</div>
+    </div>
+
+    <div class="rp-controls">
+      <button id="rp-start" class="rp-btn">开始随机</button>
+      <button id="rp-next-img" class="rp-btn rp-ghost">换背景</button>
+      <button id="rp-next-song" class="rp-btn rp-ghost">换歌曲</button>
+    </div>
+
+    <audio id="rp-audio" controls preload="none" class="rp-audio"></audio>
+    
+  </div>
+</div><div class="rp-bottom-progress" id="rp-bottom-progress">
+  <div class="rp-bottom-row">
+    <span class="rp-bottom-time" id="rp-prog-time">00:00 / 40:00</span>
+    <div class="rp-bottom-actions">
+      <button id="rp-25" class="rp-btn rp-ghost rp-mini">25分钟</button>
+      <button id="rp-40" class="rp-btn rp-ghost rp-mini rp-active">40分钟</button>
+      
+      <button id="rp-pause" class="rp-btn rp-mini rp-pause-btn">▮▮</button>
+    </div>
+  </div>
+  <div class="rp-bottom-track">
+    <div class="rp-bottom-fill" id="rp-prog-fill" style="width:0%"></div>
+  </div>
+</div>
+
+
+
+<div id="rp-animal-pop" class="rp-pop" aria-hidden="true">
+  <div class="rp-pop-inner">
+    <img id="rp-animal-img" alt="Cute animal" />
+    <button id="rp-pop-close" class="rp-pop-close" aria-label="关闭">×</button>
+  </div>
+</div>
+
+ 
+
+<script>
+
+  
+  window.RP_IMAGES = ["\/media\/images\/5e7db165a34840496a4d46327e53abca180234af.jpg@1052w_!web-dynamic.webp","\/media\/images\/eb8ba3dafa694616788eec8ac2e5a1eeb5a3d135.jpg@1052w_!web-dynamic.webp"];
+  window.RP_TRACKS = ["\/media\/music\/1.mp3"];
+  window.RP_ANIMALS = ["\/media\/animals\/Screenshot 2025-08-20 at 10.59.00 am.png"];   
+
+  (function () {
+    const wrap  = document.getElementById('rp-wrap');
+    const title = document.getElementById('rp-title');
+    const sub   = document.getElementById('rp-sub');
+    const audio = document.getElementById('rp-audio');
+
+    const btnStart   = document.getElementById('rp-start');
+    const btnNextImg = document.getElementById('rp-next-img');
+    const btnNextSong= document.getElementById('rp-next-song');
+
+    audio.setAttribute('playsinline',''); 
+    audio.muted = false;
+    audio.volume = 1.0;
+
+    const imgs  = [...(window.RP_IMAGES || [])];
+    const songs = [...(window.RP_TRACKS || [])];
+
+    function shuffle(arr){
+      for(let i = arr.length - 1; i > 0; i--){
+        const j = Math.floor(Math.random()*(i+1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+    let iIdx = 0, sIdx = 0;
+    shuffle(imgs); shuffle(songs);
+
+    function prettifyName(p){
+      try{
+        const file = p.split('/').pop();
+        const noext = file.replace(/\.[^.]+$/, '');
+        return decodeURIComponent(noext).replace(/[_\-]+/g,' ').trim();
+      }catch{ return p; }
+    }
+
+    function status(msg){ sub.textContent = msg; }
+
+    function nextImage(){
+      if(!imgs.length){ status('未找到图片：static/media/images'); return; }
+      if(iIdx >= imgs.length){ shuffle(imgs); iIdx = 0; }
+      const url = imgs[iIdx++];
+      document.body.style.backgroundImage = `url('${url}')`;
+      document.body.style.backgroundSize = 'cover';
+      document.body.style.backgroundPosition = 'center';
+      document.body.style.backgroundAttachment = 'fixed'; 
+      status('背景：' + prettifyName(url));
+    }
+    
+    function nextSong(autoplay=true){
+      if(!songs.length){ status('未找到歌曲：static/media/music'); return; }
+      if(sIdx >= songs.length){ shuffle(songs); sIdx = 0; }
+      let url = songs[sIdx++]; 
+      
+      url += (url.includes('?') ? '&' : '?') + 'v=' + Date.now();
+
+      audio.src = url;
+      title.textContent = prettifyName(url);
+
+      if(autoplay){
+        audio.play().then(()=>{
+          status('正在播放：' + prettifyName(url));
+        }).catch((e)=>{
+          status('需要先点击“开始随机” / 或查看控制台错误');
+          console.warn('audio.play() 失败：', e, ' src=', url);
+        });
+      }
+    }
+
+    function start(){
+      if(!imgs.length && !songs.length){
+        title.textContent = '没有可用的图片或歌曲';
+        status('请把文件放到 /static/media/images 与 /static/media/music');
+        return;
+      }
+      nextImage();
+      nextSong(true);
+      if(!pTimer) startProgress(); 
+    }
+
+    btnStart.addEventListener('click', start);
+    btnNextImg.addEventListener('click', nextImage);
+    btnNextSong.addEventListener('click', ()=> nextSong(true));
+    audio.addEventListener('ended', ()=> nextSong(true));
+
+    audio.addEventListener('error', () => {
+      const code = audio.error && audio.error.code;
+      const map = {1:'用户终止',2:'网络错误(可能404)',3:'解码失败(格式不支持/损坏)',4:'不支持的格式'};
+      status(`音频错误：${map[code] || '未知错误'}`);
+      console.error('Audio error', audio.error, 'src=', audio.src);
+    }); 
+  
+
+let P_SECONDS = 40 * 60;                 
+const progTime = document.getElementById('rp-prog-time');
+const progFill = document.getElementById('rp-prog-fill');
+
+
+const btn25   = document.getElementById('rp-25');
+const btn40   = document.getElementById('rp-40');
+const btnPause= document.getElementById('rp-pause');
+
+let pStart = null;   
+let pAccum = 0;      
+let pTimer = null;   
+let CURRENT_MIN = 40;
+
+function fmt(ss){
+  ss = Math.max(0, Math.floor(ss));
+  const m = String(Math.floor(ss/60)).padStart(2,'0');
+  const s = String(ss%60).padStart(2,'0');
+  return `${m}:${s}`;
+}
+function totalFmt(){ return fmt(P_SECONDS); }
+function isRunning(){ return !!pTimer; }
+
+function elapsed(){
+  const run = pStart ? (Date.now() - pStart)/1000 : 0;
+  return Math.min(P_SECONDS, pAccum + run);
+}
+function renderProgress(){
+  const e = elapsed();
+  const pct = (e / P_SECONDS) * 100;
+  if (progFill) progFill.style.width = `${pct}%`;
+  if (progTime) progTime.textContent = `${fmt(e)} / ${totalFmt()}`;
+}
+function tick(){
+  renderProgress();
+  if (elapsed() >= P_SECONDS){
+    completeProgress();
+  }
+}
+function startProgress(){
+  if (pTimer) return;
+  if (!pStart) pStart = Date.now();
+  pTimer = setInterval(tick, 1000);
+  renderProgress();
+}
+function stopProgress(){
+  if (pTimer){ clearInterval(pTimer); pTimer = null; }
+}
+function resetProgress(){
+  stopProgress();
+  pStart = null; pAccum = 0;
+  renderProgress();
+}
+function startTimer() {
+  resetProgress();
+  startProgress();
+  if (btnPause){ btnPause.textContent = '▮▮'; btnPause.classList.remove('is-paused'); }
+}
+
+function pauseTimer(){
+  if (!pStart && !isRunning()) return;
+  pAccum = elapsed();
+  stopProgress();
+  pStart = null;
+  renderProgress();
+   
+  if (btnPause){ btnPause.textContent = '▶';  btnPause.classList.add('is-paused'); }
+
+}
+
+function resumeTimer(){
+  if (isRunning()) return;
+  pStart = Date.now();
+  startProgress();
+  if (btnPause) btnPause.textContent = '▮▮';
+  btnPause?.classList.remove('is-paused');   
+}
+
+function togglePause(){
+  isRunning() ? pauseTimer() : resumeTimer();
+}
+
+
+function setDuration(mins){
+  CURRENT_MIN = mins;
+  P_SECONDS = mins * 60;
+  btn25?.classList.toggle('rp-active', mins === 25);
+  btn40?.classList.toggle('rp-active', mins === 40);
+  startTimer(); 
+}
+
+
+btn25?.addEventListener('click', () => setDuration(25));
+btn40?.addEventListener('click', () => setDuration(40));
+btnPause?.addEventListener('click', togglePause);
+
+
+btnStart.addEventListener('click', () => {
+  if (isRunning() || pStart) return;
+  if (btnPause){ btnPause.textContent = '▮▮'; btnPause.classList.remove('is-paused'); }
+});
+
+
+
+function completeProgress(){
+  renderProgress();
+  pauseTimer();     
+  nextImage();
+  nextSong(true);
+  showAnimal();
+}
+
+
+renderProgress();
+ 
+
+
+const pop      = document.getElementById('rp-animal-pop');
+const popImg   = document.getElementById('rp-animal-img');
+const popClose = document.getElementById('rp-pop-close');
+const animals  = [...(window.RP_ANIMALS || [])];
+
+function randPick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+function showAnimal() {
+  if (!animals.length) return;
+
+  
+  const raw = animals[Math.floor(Math.random() * animals.length)];
+  const imgUrl = raw + (raw.includes('?') ? '&' : '?') + 'v=' + Date.now();
+
+  
+  stopProgress();
+
+  
+  const overlay = document.createElement('div');
+  overlay.style.position = 'fixed';
+  overlay.style.inset = '0';
+  overlay.style.background = 'rgba(0,0,0,0.7)';
+  overlay.style.display = 'flex';
+  overlay.style.flexDirection = 'column';
+  overlay.style.justifyContent = 'center';
+  overlay.style.alignItems = 'center';
+  overlay.style.zIndex = '9999';
+
+  
+  const image = document.createElement('img');
+  image.src = imgUrl;
+  image.alt = 'Cute animal';
+  image.style.maxWidth = '320px';
+  image.style.maxHeight = '70vh';
+  image.style.borderRadius = '12px';
+  image.style.marginBottom = '16px';
+  image.style.boxShadow = '0 10px 30px rgba(0,0,0,.35)';
+
+  
+  const btn = document.createElement('button');
+  btn.textContent = '重新开始倒计时';
+  btn.style.padding = '10px 18px';
+  btn.style.fontSize = '16px';
+  btn.style.borderRadius = '999px';
+  btn.style.border = 'none';
+  btn.style.cursor = 'pointer';
+  btn.style.background = '#fff';
+  btn.style.color = '#111';
+  btn.style.fontWeight = '700';
+  btn.addEventListener('click', () => {
+    document.body.removeChild(overlay);
+    startTimer(); 
+  });
+
+  overlay.appendChild(image);
+  overlay.appendChild(btn);
+  document.body.appendChild(overlay);
+}
+
+
+
+
+function hideAnimal(){
+  pop.classList.remove('show');
+}
+
+
+popClose?.addEventListener('click', hideAnimal);
+pop?.addEventListener('click', (e)=>{
+  if(e.target === pop) hideAnimal(); 
+});
+window.addEventListener('keydown', (e)=>{
+  if(e.key === 'Escape') hideAnimal();
+});
+ 
+  })();
+</script>
+
+
+
+<style>
+  .rp-wrap{
+    position: relative;top: 40%;
+    border-radius: 1rem;
+    overflow: hidden;
+    min-height: 52vh;
+    background-color: transparent;
+    box-shadow: none;
+      
+  }
+  .rp-overlay{ display: none; }
+  .rp-panel{ position: relative; z-index: 1; color: #fff; padding: clamp(16px, 4vw, 32px); display: grid; gap: 16px; max-width: 860px; margin: 0 auto; }
+  .rp-now{ display: grid; gap: 6px; }
+  .rp-title{ font-size: clamp(20px, 3.2vw, 28px); font-weight: 700; }
+  .rp-sub{ opacity: .9; font-size: 20px; }
+  .rp-controls{ display: flex; gap: 10px; flex-wrap: wrap; }
+  .rp-btn{ appearance: none; border: none; cursor: pointer; padding: 10px 14px; border-radius: 999px; font-weight: 600; background: rgba(255,255,255,.92); color: #111; transition: transform .08s ease, opacity .2s ease, background .2s ease; }
+  .rp-btn:hover{ transform: translateY(-1px); }
+  .rp-btn:active{ transform: translateY(0); opacity: .85; }
+  .rp-btn.rp-ghost{ background: rgba(255,255,255,.2); color: #fff; border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(6px); }
+  .rp-audio{ width: 100%; max-width: 480px; height: 32px; background: none; border-radius: 10px;border: none; }
+   
+   
+  .rp-bottom-progress{
+    position: fixed; top: 80%; left: 50%;
+    left: 0; right: 0; bottom: 0;
+    z-index: 2147483647;
+    padding: 10px 14px;
+    background: rgba(20,20,20,0.75);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 -6px 20px rgba(0,0,0,.2);
+     
+  }
+  .rp-bottom-row{
+    max-width: 980px;
+    margin: 0 auto 6px auto;
+    color: #fff; display: flex; justify-content: flex-end;
+    font-size: 40px; opacity: .95;    
+  }
+  .rp-bottom-track{
+    max-width: 980px;
+    margin: 0 auto;
+    height: 10px; border-radius: 999px;
+    background: rgba(255,255,255,.25); overflow: hidden;    
+  }
+  .rp-bottom-fill{
+    height: 100%; width: 0%;
+    background: linear-gradient(90deg, #fff, #eaeaea);
+    transition: width .3s ease;   
+  }
+ 
+
+ 
+.rp-bottom-row{
+  max-width: 980px;
+  margin: 0 auto 6px auto;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  font-size: 40px;
+  opacity: .95;
+}
+
+.rp-bottom-actions{ display:flex; gap:8px; }
+
+ 
+.rp-btn.rp-mini{
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 999px;
+}
+
+ 
+.rp-active{
+  background: #fff !important;
+  color: #111 !important;
+  border-color: transparent !important;
+}
+ 
+.rp-pop{
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.55);
+  display: none;                  
+  align-items: center; justify-content: center;
+  z-index: 2147483647;
+  backdrop-filter: blur(3px);
+}
+.rp-pop.show{ display: flex; }
+
+.rp-pop-inner{
+  position: relative;
+  max-width: min(80vw, 520px);
+  max-height: 80vh;
+}
+.rp-pop-inner img{
+  display: block;
+  max-width: 100%; max-height: 80vh;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+.rp-pop-close{
+  position: absolute; top: -10px; right: -10px;
+  width: 32px; height: 32px; border-radius: 50%;
+  border: none; cursor: pointer;
+  background: #fff; color: #111; font-size: 18px; font-weight: 700;
+  box-shadow: 0 6px 16px rgba(0,0,0,.2);
+}
+.rp-pop-close:active{ transform: scale(.98); }
+ 
+ 
+
+ 
+.rp-pause-btn{
+  background: #e85427;          
+  color: #111;
+  border: 1px solid rgba(0,0,0,.1);
+  font-weight: 800;
+}
+.rp-pause-btn:hover{ transform: translateY(-1px); filter: brightness(1.05); }
+.rp-pause-btn:active{ transform: translateY(0); opacity: .95; }
+
+ 
+.rp-pause-btn.is-paused{
+  background: #4adeaa;          
+  color: #0b3d19;
+  border-color: rgba(0,0,0,.08);
+}
+ 
+#rp-25,
+#rp-40{
+  padding: 10px 18px;    
+  font-size: 16px;       
+  min-height: 38px;
+  border-radius: 999px;
+}
+
+ 
+@media (min-width: 768px){
+  #rp-25,
+  #rp-40{
+    padding: 12px 22px;
+    font-size: 18px;
+    min-height: 42px;
+  }
+}
+ 
+#rp-pause, #rp-pause-btn{
+  width: 56px;
+  height: 56px;
+  padding: 0;                  
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;             
+  font-weight: 900;
+  line-height: 1;
+  background: #fff;
+  color: #111;
+  border: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,.2);
+}
+
+ 
+#rp-pause.is-paused, #rp-pause-btn.is-paused{
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,.9);
+}
+
+ 
+#rp-pause:active, #rp-pause-btn:active{ transform: scale(.98); }
+
+</style>
+
+
+          
+          
+          
+        </div>
+
+        
+
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_tomatoTimer/first/index.md"
+          data-oid-likes="likes_tomatoTimer/first/index.md"></script>
+      
+
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/tomatotimer/sec/">
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >赵的Tomate</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="0001-01-01T00:00:00&#43;00:00">1 January 0001</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a
+    href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
       </main><footer id="site-footer" class="py-10 print:hidden">
   
   

@@ -1,15 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>随机音乐与图片 on 悉达多</title>
+    <title>TomatoTimers on 悉达多</title>
     <link>https://watermelonmax.github.io/tomatotimer/</link>
-    <description>Recent content in 随机音乐与图片 on 悉达多</description>
+    <description>Recent content in TomatoTimers on 悉达多</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>@example.com (Your name here)</managingEditor>
     <webMaster>@example.com (Your name here)</webMaster>
     <copyright>© 2025 Your name here</copyright>
     <atom:link href="https://watermelonmax.github.io/tomatotimer/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>赵的Tomate</title>
+      <link>https://watermelonmax.github.io/tomatotimer/sec/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/tomatotimer/sec/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/tomatotimer/sec/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>随机音乐与图片</title>
+      <link>https://watermelonmax.github.io/tomatotimer/first/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/tomatotimer/first/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/tomatotimer/first/featured.jpg" />
+    </item>
     
   </channel>
 </rss>
