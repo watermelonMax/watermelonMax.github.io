@@ -134,7 +134,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "11"
+    "wordCount": "12"
   }]
   </script>
 
@@ -662,66 +662,64 @@
 
         <div class="article-content max-w-prose mb-20">
           
-
- 
 <div class="rp-wrap" id="rp-wrap">
-<h1 class="rp-hero rp-hero--top">Let's&nbsp;Focus！</h1>
+  <h1 class="rp-hero rp-hero--top">Let's&nbsp;Focus！</h1>
 
-  <div class="rp-overlay"></div>
-
- 
-<section class="rp-clock-section layout-nice">
-  
-  <div class="rp-clock" id="rp-clock" aria-label="倒计时">
-<svg viewBox="0 0 120 120" class="rp-clock-svg" aria-hidden="true">
-  <defs>
-    <linearGradient id="clockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%"   stop-color="#FFD7E2"/>
-      <stop offset="100%" stop-color="#C7C9FF"/>
-    </linearGradient>
-  </defs>
-  <circle class="rp-clock-bg"   cx="60" cy="60" r="54"></circle>
-  <circle class="rp-clock-ring" cx="60" cy="60" r="54"></circle>
-</svg>
-<div class="rp-clock-time" id="rp-prog-time">25:00</div>
-
-  </div>
-
-  
-  <aside class="rp-side">
+  <section class="rp-clock-section">
     
-    <div class="rp-row rp-row-1">
-      <input id="rp-custom" type="number" min="1" max="240" value="25" class="rp-input-min" />
-      <button id="rp-set"   class="rp-btn rp-ghost">设定</button>
-      <button id="rp-reset" class="rp-btn rp-strong">重置(25分)</button>
-      <button id="rp-pause" class="rp-btn rp-pause-btn" title="暂停/继续">▮▮</button>
+    <div class="rp-clock" id="rp-clock" aria-label="倒计时">
+      <svg viewBox="0 0 120 120" class="rp-clock-svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="clockGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%"   stop-color="#FFD7E2"/>
+            <stop offset="100%" stop-color="#C7C9FF"/>
+          </linearGradient>
+        </defs>
+        <circle class="rp-clock-bg"   cx="60" cy="60" r="54"></circle>
+        <circle class="rp-clock-ring" cx="60" cy="60" r="54"></circle>
+      </svg>
+      <div class="rp-clock-time" id="rp-prog-time">25:00</div>
     </div>
 
     
-    <div class="rp-row rp-row-2">
-      <button id="rp-start"    class="rp-btn rp-strong">开始随机</button>
-      <button id="rp-next-img" class="rp-btn rp-ghost">换背景</button>
-      <button id="rp-next-song"class="rp-btn rp-ghost">换歌曲</button>
-    </div>
+    <aside class="rp-side">
+      
+      <div class="rp-row rp-row-1">
+        <input id="rp-custom" type="number" min="1" max="240" value="25" class="rp-input-min" />
+        <button id="rp-set"   class="rp-btn rp-ghost"  type="button">设定</button>
+        <button id="rp-reset" class="rp-btn rp-strong" type="button">重置(25分)</button>
+        <button id="rp-pause" class="rp-btn rp-pause-btn" type="button" title="暂停/继续">▮▮</button>
+      </div>
 
-    
-    <audio id="rp-audio" controls preload="none" class="rp-audio rp-audio--wide"></audio>
+      
+      <div class="rp-row rp-row-2">
+        <button id="rp-start"     class="rp-btn rp-strong" type="button">开始随机</button>
+        <button id="rp-next-img"  class="rp-btn rp-ghost"  type="button">换背景</button>
+        <button id="rp-next-song" class="rp-btn rp-ghost"  type="button">换歌曲</button>
+      </div>
 
-    
-    <div class="rp-now">
-      <div class="rp-title" id="rp-title">未播放</div>
-      <div class="rp-sub"   id="rp-sub">点击「开始随机」</div>
-    </div>
-  </aside>
-</section>
- 
+      
+      <audio id="rp-audio" controls preload="none" class="rp-audio rp-audio--wide"></audio>
 
+      
+      <div class="rp-row rp-row-url">
+        <input id="rp-url" type="url" inputmode="url"
+               placeholder="粘贴 MP3 直链，例如 https://cdn.xxx/xxx.mp3"
+               class="rp-url-input" />
+        <button id="rp-play-url" class="rp-btn rp-strong" type="button">Play</button>
+       
+      </div>
 
- 
-
-
-  </div>
+      
+      <div class="rp-now">
+        <div class="rp-title" id="rp-title">未播放</div>
+        <div class="rp-sub"   id="rp-sub">点击「开始随机」</div>
+      </div>
+    </aside>
+  </section>
 </div>
+
+
 <div id="rp-animal-pop" class="rp-pop" aria-hidden="true">
   <div class="rp-pop-inner">
     <img id="rp-animal-img" alt="Cute animal" />
@@ -729,1089 +727,305 @@
   </div>
 </div>
 
- 
-
 <script>
-
-  
-  window.RP_IMAGES = ["\/media\/images\/5e7db165a34840496a4d46327e53abca180234af.jpg@1052w_!web-dynamic.webp","\/media\/images\/eb8ba3dafa694616788eec8ac2e5a1eeb5a3d135.jpg@1052w_!web-dynamic.webp"];
-  window.RP_TRACKS = ["\/media\/music\/1.mp3"];
-  window.RP_ANIMALS = ["\/media\/animals\/Screenshot 2025-08-20 at 10.59.00 am.png"];   
-
-  (function () {
-    const wrap  = document.getElementById('rp-wrap');
-    const title = document.getElementById('rp-title');
-    const sub   = document.getElementById('rp-sub');
-    const audio = document.getElementById('rp-audio');
-
-    const btnStart   = document.getElementById('rp-start');
-    const btnNextImg = document.getElementById('rp-next-img');
-    const btnNextSong= document.getElementById('rp-next-song');
-
-    audio.setAttribute('playsinline',''); 
-    audio.muted = false;
-    audio.volume = 1.0;
-
-    const imgs  = [...(window.RP_IMAGES || [])];
-    const songs = [...(window.RP_TRACKS || [])];
-
-    function shuffle(arr){
-      for(let i = arr.length - 1; i > 0; i--){
-        const j = Math.floor(Math.random()*(i+1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-    let iIdx = 0, sIdx = 0;
-    shuffle(imgs); shuffle(songs);
-
-    function prettifyName(p){
-      try{
-        const file = p.split('/').pop();
-        const noext = file.replace(/\.[^.]+$/, '');
-        return decodeURIComponent(noext).replace(/[_\-]+/g,' ').trim();
-      }catch{ return p; }
-    }
-
-    function status(msg){ sub.textContent = msg; }
-
-    function nextImage(){
-      if(!imgs.length){ status('未找到图片：static/media/images'); return; }
-      if(iIdx >= imgs.length){ shuffle(imgs); iIdx = 0; }
-      const url = imgs[iIdx++];
-      document.body.style.backgroundImage = `url('${url}')`;
-      document.body.style.backgroundSize = 'cover';
-      document.body.style.backgroundPosition = 'center';
-      document.body.style.backgroundAttachment = 'fixed'; 
-      status('背景：' + prettifyName(url));
-    }
-    
-    function nextSong(autoplay=true){
-      if(!songs.length){ status('未找到歌曲：static/media/music'); return; }
-      if(sIdx >= songs.length){ shuffle(songs); sIdx = 0; }
-      let url = songs[sIdx++]; 
-      
-      url += (url.includes('?') ? '&' : '?') + 'v=' + Date.now();
-
-      audio.src = url;
-      title.textContent = prettifyName(url);
-
-      if(autoplay){
-        audio.play().then(()=>{
-          status('正在播放：' + prettifyName(url));
-        }).catch((e)=>{
-          status('需要先点击“开始随机” / 或查看控制台错误');
-          console.warn('audio.play() 失败：', e, ' src=', url);
-        });
-      }
-    }
-
-    function start(){
-      if(!imgs.length && !songs.length){
-        title.textContent = '没有可用的图片或歌曲';
-        status('请把文件放到 /static/media/images 与 /static/media/music');
-        return;
-      }
-      nextImage();
-      nextSong(true);
-      if(!pTimer) startProgress(); 
-    }
-
-    btnStart.addEventListener('click', start);
-    btnNextImg.addEventListener('click', nextImage);
-    btnNextSong.addEventListener('click', ()=> nextSong(true));
-    audio.addEventListener('ended', ()=> nextSong(true));
-
-    audio.addEventListener('error', () => {
-      const code = audio.error && audio.error.code;
-      const map = {1:'用户终止',2:'网络错误(可能404)',3:'解码失败(格式不支持/损坏)',4:'不支持的格式'};
-      status(`音频错误：${map[code] || '未知错误'}`);
-      console.error('Audio error', audio.error, 'src=', audio.src);
-    }); 
-  
-
-
  
+window.RP_IMAGES  = ["\/media\/images\/5e7db165a34840496a4d46327e53abca180234af.jpg@1052w_!web-dynamic.webp","\/media\/images\/eb8ba3dafa694616788eec8ac2e5a1eeb5a3d135.jpg@1052w_!web-dynamic.webp"];
+window.RP_TRACKS  = ["\/media\/music\/1.mp3"];
+window.RP_ANIMALS = ["\/media\/animals\/Screenshot 2025-08-20 at 10.59.00 am.png"];
 
+(function () {
+   
+  const title = document.getElementById('rp-title');
+  const sub   = document.getElementById('rp-sub');
+  const audio = document.getElementById('rp-audio');
 
-let P_SECONDS = 25 * 60;
-const timeEl   = document.getElementById('rp-prog-time');
-const inCustom = document.getElementById('rp-custom');
-const btnSet   = document.getElementById('rp-set');
-const btnPause = document.getElementById('rp-pause');
-const btnReset = document.getElementById('rp-reset');
-const ringEl   = document.querySelector('.rp-clock-ring');
+  const btnStart     = document.getElementById('rp-start');
+  const btnNextImg   = document.getElementById('rp-next-img');
+  const btnNextSong  = document.getElementById('rp-next-song');
+  const btnPause     = document.getElementById('rp-pause');
+  const btnReset     = document.getElementById('rp-reset');
+  const inCustom     = document.getElementById('rp-custom');
+  const btnSet       = document.getElementById('rp-set');
 
-const R = 54, CIRC = 2 * Math.PI * R;
-if (ringEl){
-  ringEl.style.strokeDasharray  = `${CIRC}`;  
-  ringEl.style.strokeDashoffset = `${CIRC}`;  
-}
-let pStart = null, pAccum = 0, pTimer = null;
+  const urlInput   = document.getElementById('rp-url');
+  const btnPlayUrl = document.getElementById('rp-play-url');
+  const btnAddUrl  = document.getElementById('rp-add-url');
 
-function fmt(ss){ ss = Math.max(0, Math.floor(ss)); const m = String(Math.floor(ss/60)).padStart(2,'0'); const s = String(ss%60).padStart(2,'0'); return `${m}:${s}`; }
-function isRunning(){ return !!pTimer; }
-function elapsed(){ const run = pStart ? (Date.now()-pStart)/1000 : 0; return Math.min(P_SECONDS, pAccum + run); }
-function remaining(){ return Math.max(0, P_SECONDS - elapsed()); }
+   
+  audio.setAttribute('playsinline','');
+  audio.muted = false;
+  audio.volume = 1.0;
 
-function renderClock(){
-  const rem = remaining();
-  timeEl.textContent = fmt(rem);
-  const done = (P_SECONDS - rem) / P_SECONDS;      
-  ringEl.style.strokeDashoffset = `${CIRC * (1 - done)}`;
-}
+  const imgs  = [...(window.RP_IMAGES || [])];
+  const songs = [...(window.RP_TRACKS || [])];
+  const animals = [...(window.RP_ANIMALS || [])];
 
-function tick(){ renderClock(); if (remaining() <= 0) completeClock(); }
-function startProgress(){ if (pTimer) return; if (!pStart) pStart = Date.now(); pTimer = setInterval(tick, 1000); renderClock(); }
-function stopProgress(){ if (pTimer){ clearInterval(pTimer); pTimer = null; } }
-function resetProgress(){ stopProgress(); pStart = null; pAccum = 0; renderClock(); }
-function startTimer(){ resetProgress(); startProgress(); btnPause.textContent = '▮▮'; btnPause.classList.remove('is-paused'); }
+  const songLabel = new Map();               
+  songs.forEach(s => songLabel.set(s, prettifyName(s)));
 
-function pauseTimer(){ if (!pStart && !isRunning()) return; pAccum = elapsed(); stopProgress(); pStart = null; renderClock(); btnPause.textContent = '▶'; btnPause.classList.add('is-paused'); }
-function resumeTimer(){ if (isRunning()) return; pStart = Date.now(); startProgress(); btnPause.textContent = '▮▮'; btnPause.classList.remove('is-paused'); }
+  function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+  shuffle(imgs); shuffle(songs);
+  let iIdx = 0, sIdx = 0;
 
-function pauseAll(){ pauseTimer(); try{ audio.pause(); }catch{} }
-function resumeAll(){ resumeTimer(); audio.play().catch(()=>{}); }
-function togglePauseAll(){ isRunning() ? pauseAll() : resumeAll(); }
+  function prettifyName(p){
+    try{ const file = p.split('/').pop().replace(/\.[^.]+$/,''); return decodeURIComponent(file).replace(/[_\-]+/g,' ').trim(); }
+    catch{ return p; }
+  }
+  function status(msg){ sub.textContent = msg; }
 
-function setDuration(mins){
-  const m = Math.max(1, Math.min(240, Math.round(mins)));
-  P_SECONDS = m * 60;
-  inCustom.value = String(m);
-  startTimer();  
-}
+   
+  function nextImage(){
+    if(!imgs.length){ status('未找到图片：/static/media/images'); return; }
+    if(iIdx >= imgs.length){ shuffle(imgs); iIdx = 0; }
+    const url = imgs[iIdx++];
+    document.body.style.backgroundImage = `url('${url}')`;
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center';
+    document.body.style.backgroundAttachment = 'fixed';
+    status('背景：' + prettifyName(url));
+  }
 
+  function nextSong(autoplay=true){
+    if(!songs.length){ status('未找到歌曲：/static/media/music'); return; }
+    if(sIdx >= songs.length){ shuffle(songs); sIdx = 0; }
 
-btnSet.addEventListener('click', () => {
-  const mins = parseInt(inCustom.value || '25', 10);
-  if (Number.isFinite(mins) && mins > 0) setDuration(mins);
-  else { inCustom.focus(); inCustom.select(); }
-});
-btnReset.addEventListener('click', () => {
-  setDuration(25);
-  nextImage();
-  nextSong(true);
-});
-btnPause.addEventListener('click', togglePauseAll);
+    const base = songs[sIdx++]; 
+    const url  = base + (base.includes('?') ? '&' : '?') + 'v=' + Date.now(); 
+    audio.src = url;
 
+    const label = songLabel.get(base) || prettifyName(base);
+    title.textContent = label;  
+    if(autoplay){
+      audio.play().then(()=>status('正在播放')).catch(()=>status('需要点击 ▶'));
+    }
+  }
 
-audio.addEventListener('pause', () => { if (isRunning()) pauseTimer(); });
-audio.addEventListener('play',  () => { if (!isRunning()) resumeTimer(); });
+   
+  let P_SECONDS = 25 * 60;
+  const timeEl = document.getElementById('rp-prog-time');
+  const ringEl = document.querySelector('.rp-clock-ring');
+  const R = 54, CIRC = 2*Math.PI*R;
+  if (ringEl){ ringEl.style.strokeDasharray = `${CIRC}`; ringEl.style.strokeDashoffset = `${CIRC}`; }
 
+  let pStart = null, pAccum = 0, pTimer = null;
+  const fmt = ss => { ss=Math.max(0,Math.floor(ss)); const m=String(Math.floor(ss/60)).padStart(2,'0'); const s=String(ss%60).padStart(2,'0'); return `${m}:${s}`; };
+  const isRunning = () => !!pTimer;
+  const elapsed   = () => Math.min(P_SECONDS, pAccum + (pStart ? (Date.now()-pStart)/1000 : 0));
+  const remaining = () => Math.max(0, P_SECONDS - elapsed());
 
-btnStart.addEventListener('click', () => {
-  nextImage();
-  nextSong(true);
-  if (!isRunning() && !pStart) startProgress();
-  btnPause.textContent = '▮▮'; btnPause.classList.remove('is-paused');
-});
+  function renderClock(){
+    const rem = remaining();
+    timeEl.textContent = fmt(rem);
+    const done = (P_SECONDS - rem) / P_SECONDS;
+    if (ringEl) ringEl.style.strokeDashoffset = `${CIRC * (1 - done)}`;
+  }
+  function tick(){ renderClock(); if(remaining()<=0) completeClock(); }
+  function startProgress(){ if(pTimer) return; if(!pStart) pStart = Date.now(); pTimer = setInterval(tick,1000); renderClock(); }
+  function stopProgress(){ if(pTimer){ clearInterval(pTimer); pTimer=null; } }
+  function resetProgress(){ stopProgress(); pStart=null; pAccum=0; renderClock(); }
+  function startTimer(){ resetProgress(); startProgress(); btnPause.textContent='▮▮'; btnPause.classList.remove('is-paused'); }
+  function pauseTimer(){ if(!pStart && !isRunning()) return; pAccum=elapsed(); stopProgress(); pStart=null; renderClock(); btnPause.textContent='▶'; btnPause.classList.add('is-paused'); }
+  function resumeTimer(){ if(isRunning()) return; pStart=Date.now(); startProgress(); btnPause.textContent='▮▮'; btnPause.classList.remove('is-paused'); }
 
+  function setDuration(mins){
+    const m = Math.max(1, Math.min(240, Math.round(mins)));
+    P_SECONDS = m * 60;
+    inCustom.value = String(m);
+    startTimer();
+  }
 
-function completeClock(){
-  renderClock();
-  pauseAll();
-  nextImage();
-  nextSong(false);
-  showAnimal();
-}
+   
+  function pauseAll(){ pauseTimer(); try{ audio.pause(); }catch{} }
+  function resumeAll(){ resumeTimer(); audio.play().catch(()=>{}); }
+  function togglePauseAll(){ isRunning() ? pauseAll() : resumeAll(); }
 
+   
+  function completeClock(){
+    renderClock();
+    pauseAll();
+    nextImage();
+    nextSong(false);
+    showAnimal(); 
+  }
 
-renderClock();
- 
+   
+  function normalizeMp3(u){
+    try{
+      const url = new URL(String(u).trim());
+      if(!/\.(mp3)(\?|#|$)/i.test(url.pathname)) throw new Error();
+      return url.href;
+    }catch{
+      status('请粘贴以 .mp3 结尾的直链地址');
+      urlInput?.focus();
+      return null;
+    }
+  }
+  function playFromUrl(u, addToPool){
+    const href = normalizeMp3(u);
+    if(!href) return;
+    const label = '非本地歌曲';
 
+    audio.src = href;
+    title.textContent = label;
+    audio.play().then(()=>status('正在播放')).catch(()=>status('需要点击 ▶'));
 
-const pop      = document.getElementById('rp-animal-pop');
-const popImg   = document.getElementById('rp-animal-img');
-const popClose = document.getElementById('rp-pop-close');
-const animals  = [...(window.RP_ANIMALS || [])];
+    if(addToPool){
+      songs.push(href);
+      songLabel.set(href, label);
+      shuffle(songs);
+    }
+    if(urlInput){ urlInput.value=''; urlInput.blur(); }
+  }
 
-function randPick(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
-function showAnimal() {
-  if (!animals.length) return;
+   
+  function showAnimal(){
+    if(!animals.length) return;
+    const raw = animals[Math.floor(Math.random()*animals.length)];
+    const imgUrl = raw + (raw.includes('?') ? '&' : '?') + 'v=' + Date.now();
 
-  
-  const raw = animals[Math.floor(Math.random() * animals.length)];
-  const imgUrl = raw + (raw.includes('?') ? '&' : '?') + 'v=' + Date.now();
+    stopProgress();
+    const overlay = document.createElement('div');
+    Object.assign(overlay.style,{
+      position:'fixed',inset:'0',background:'rgba(0,0,0,.7)',display:'flex',
+      flexDirection:'column',justifyContent:'center',alignItems:'center',zIndex:'9999'
+    });
+    const img = document.createElement('img');
+    Object.assign(img.style,{maxWidth:'320px',maxHeight:'70vh',borderRadius:'12px',marginBottom:'16px',boxShadow:'0 10px 30px rgba(0,0,0,.35)'});
+    img.src = imgUrl; img.alt='Cute animal';
+    const btn = document.createElement('button');
+    btn.textContent='重新开始倒计时';
+    Object.assign(btn.style,{padding:'10px 18px',fontSize:'16px',borderRadius:'999px',border:'none',cursor:'pointer',background:'#fff',color:'#111',fontWeight:'700'});
+    btn.addEventListener('click',()=>{ document.body.removeChild(overlay); startTimer(); });
+    overlay.appendChild(img); overlay.appendChild(btn);
+    document.body.appendChild(overlay);
+  }
 
-  
-  stopProgress();
-
-  
-  const overlay = document.createElement('div');
-  overlay.style.position = 'fixed';
-  overlay.style.inset = '0';
-  overlay.style.background = 'rgba(0,0,0,0.7)';
-  overlay.style.display = 'flex';
-  overlay.style.flexDirection = 'column';
-  overlay.style.justifyContent = 'center';
-  overlay.style.alignItems = 'center';
-  overlay.style.zIndex = '9999';
-
-  
-  const image = document.createElement('img');
-  image.src = imgUrl;
-  image.alt = 'Cute animal';
-  image.style.maxWidth = '320px';
-  image.style.maxHeight = '70vh';
-  image.style.borderRadius = '12px';
-  image.style.marginBottom = '16px';
-  image.style.boxShadow = '0 10px 30px rgba(0,0,0,.35)';
-
-  
-  const btn = document.createElement('button');
-  btn.textContent = '重新开始倒计时';
-  btn.style.padding = '10px 18px';
-  btn.style.fontSize = '16px';
-  btn.style.borderRadius = '999px';
-  btn.style.border = 'none';
-  btn.style.cursor = 'pointer';
-  btn.style.background = '#fff';
-  btn.style.color = '#111';
-  btn.style.fontWeight = '700';
-  btn.addEventListener('click', () => {
-    document.body.removeChild(overlay);
-    startTimer(); 
+   
+  btnSet.addEventListener('click', () => {
+    const mins = parseInt(inCustom.value || '25', 10);
+    Number.isFinite(mins) && mins > 0 ? setDuration(mins) : (inCustom.focus(), inCustom.select());
   });
 
-  overlay.appendChild(image);
-  overlay.appendChild(btn);
-  document.body.appendChild(overlay);
-}
+  btnReset.addEventListener('click', () => {
+    setDuration(25);
+    nextImage();
+    nextSong(true);
+  });
 
-function pauseAll(){
-  pauseTimer();                
-  try{ audio.pause(); }catch{}
-}
-function resumeAll(){
-  resumeTimer();               
-  audio.play().catch(()=>{});  
-}
-function togglePauseAll(){
-  isRunning() ? pauseAll() : resumeAll();
-}
-btnPause?.addEventListener('click', togglePauseAll);
+  btnPause.addEventListener('click', togglePauseAll);
+  btnStart.addEventListener('click', () => {
+    nextImage();
+    nextSong(true);
+    if (!isRunning() && !pStart) startProgress();
+    btnPause.textContent='▮▮'; btnPause.classList.remove('is-paused');
+  });
+  btnNextImg.addEventListener('click', nextImage);
+  btnNextSong.addEventListener('click', () => nextSong(true));
+  audio.addEventListener('ended', () => nextSong(true));
+  audio.addEventListener('pause', () => { if(isRunning()) pauseTimer(); });
+  audio.addEventListener('play',  () => { if(!isRunning()) resumeTimer(); });
+  audio.addEventListener('error', () => {
+    const code = audio.error && audio.error.code;
+    const map = {1:'用户终止',2:'网络错误(可能404)',3:'解码失败',4:'不支持的格式'};
+    status(`音频错误：${map[code] || '未知错误'}`);
+    console.error('Audio error', audio.error, 'src=', audio.src);
+  });
 
+  
+  btnPlayUrl?.addEventListener('click', e => { e.preventDefault(); playFromUrl(urlInput.value, false); });
+  btnAddUrl ?.addEventListener('click', e => { e.preventDefault(); playFromUrl(urlInput.value, true ); });
+  urlInput  ?.addEventListener('keydown', e => { if(e.key==='Enter'){ e.preventDefault(); playFromUrl(urlInput.value, false); } });
 
-btnStart.addEventListener('click', () => {
-  if (!isRunning() && !pStart) { startProgress(); }
-  btnPause?.classList.remove('is-paused');
-  if (btnPause) btnPause.textContent = '▮▮';
-});
-
-function resetAll(){
-  setDuration(25);   
-  nextImage();       
-  nextSong(true);    
-  startTimer();      
-  if (btnPause) { btnPause.textContent = '▮▮'; btnPause.classList.remove('is-paused'); }
-}
-document.getElementById('rp-reset')?.addEventListener('click', resetAll);
-
-
-function hideAnimal(){
-  pop.classList.remove('show');
-}
-
-
-popClose?.addEventListener('click', hideAnimal);
-pop?.addEventListener('click', (e)=>{
-  if(e.target === pop) hideAnimal(); 
-});
-window.addEventListener('keydown', (e)=>{
-  if(e.key === 'Escape') hideAnimal();
-});
- 
-  })();
+  
+  renderClock();
+})();
 </script>
 
-
-
 <style>
-  .rp-wrap{
-    position: relative; 
-    border-radius: 1rem;
-    overflow: hidden;
-    min-height: 52vh;
-    background-color: transparent;
-    box-shadow: none;
-      
-  }
-  .rp-overlay{ display: none; }
-  .rp-panel{ position: relative; z-index: 1; color: #fff; padding: clamp(16px, 4vw, 32px); display: grid; gap: 16px; max-width: 5000px;  margin: 0 auto; }
-  .rp-now{ display: grid; gap: 6px; margin-top: 12px; }
-  .rp-title{ font-size: clamp(20px, 3.2vw, 28px); font-weight: 700; }
-  .rp-sub{ opacity: .9; font-size: 20px; }
-  .rp-controls{ display: flex; gap: 10px; flex-wrap: wrap; }
-  .rp-btn{ appearance: none; border: none; cursor: pointer; padding: 10px 14px; border-radius: 999px; font-weight: 600; background: rgba(255,255,255,.92); color: #111; transition: transform .08s ease, opacity .2s ease, background .2s ease; }
-  .rp-btn:hover{ transform: translateY(-1px); }
-  .rp-btn:active{ transform: translateY(0); opacity: .85; }
-  .rp-btn.rp-ghost{ background: rgba(255,255,255,.2); color: #fff; border: 1px solid rgba(255,255,255,.35); backdrop-filter: blur(6px); }
-  .rp-audio{ width: 100%; max-width: 480px; height: 32px; background: none; border-radius: 10px;border: none; }
-   
-   
-   
-  .rp-bottom-row{
-    max-width: 980px;
-    margin: 0 auto 6px auto;
-    color: #fff; display: flex; justify-content: flex-end;
-    font-size: 40px; opacity: .95;    
-  }
-  .rp-bottom-track{
-    max-width: 980px;
-    margin: 0 auto;
-    height: 10px; border-radius: 999px;
-    background: rgba(238, 229, 229, 0.25); overflow: hidden;    
-  }
-  .rp-bottom-fill{
-    height: 100%; width: 0%;
-    background: linear-gradient(90deg, #fff, #eaeaea);
-    transition: width .3s ease;   
-  }
  
-
- 
-.rp-bottom-row{
-  max-width: 980px;
-  margin: 0 auto 6px auto;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;  
-  align-items: center;
-  font-size: 40px;
-  opacity: .95;
-}
-
-.rp-bottom-actions{ display:flex; gap:8px; }
-
- 
-.rp-btn.rp-mini{
-  padding: 6px 10px;
-  font-size: 14px;
-  border-radius: 999px;
-}
-
- 
-.rp-active{
-  background: #fff !important;
-  color: #111 !important;
-  border-color: transparent !important;
-}
- 
-.rp-pop{
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,.55);
-  display: none;                  
-  align-items: center; justify-content: center;
-  z-index: 2147483647;
-  backdrop-filter: blur(3px);
-}
-.rp-pop.show{ display: flex; }
-
-.rp-pop-inner{
-  position: relative;
-  max-width: min(80vw, 520px);
-  max-height: 80vh;
-}
-.rp-pop-inner img{
-  display: block;
-  max-width: 100%; max-height: 80vh;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
-}
-.rp-pop-close{
-  position: absolute; top: -10px; right: -10px;
-  width: 32px; height: 32px; border-radius: 50%;
-  border: none; cursor: pointer;
-  background: #fff; color: #111; font-size: 18px; font-weight: 700;
-  box-shadow: 0 6px 16px rgba(0,0,0,.2);
-}
-.rp-pop-close:active{ transform: scale(.98); }
- 
- 
-
- 
-.rp-pause-btn{
-  background: #e85427;          
-  color: #111;
-  border: 1px solid rgba(0,0,0,.1);
-  font-weight: 800;
-}
-.rp-pause-btn:hover{ transform: translateY(-1px); filter: brightness(1.05); }
-.rp-pause-btn:active{ transform: translateY(0); opacity: .95; }
-
- 
-.rp-pause-btn.is-paused{
-  background: #4adeaa;          
-  color: #0b3d19;
-  border-color: rgba(0,0,0,.08);
-}
- 
-
- 
-@media (min-width: 768px){
-  #rp-25,
-  #rp-40{
-    padding: 12px 22px;
-    font-size: 18px;
-    min-height: 42px;
-  }
-}
- 
-#rp-pause, #rp-pause-btn{
-  width: 56px;
-  height: 56px;
-  padding: 0;                  
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;             
-  font-weight: 900;
-  line-height: 1;
-  background: #fff;
-  color: #111;
-  border: none;
-  box-shadow: 0 6px 16px rgba(0,0,0,.2);
-}
-
- 
-#rp-pause.is-paused, #rp-pause-btn.is-paused{
-  background: transparent;
-  color: #fff;
-  border: 2px solid rgba(255,255,255,.9);
-}
-
- 
-#rp-pause:active, #rp-pause-btn:active{ transform: scale(.98); }
- 
-.rp-bottom-time{
-  font-variant-numeric: tabular-nums;  
-}
-
- 
-.rp-bottom-actions{ display:flex; gap:10px; align-items:center; }
-
- 
-.rp-btn.rp-lg{
-  padding: 10px 18px;
-  font-size: 16px;
-  min-height: 38px;
-  border-radius: 999px;
-}
-
- 
-.rp-input-min{
-  width: 40px;
-  height: 18px;
-  padding: 6px 10px;
-  border-radius: 10px;
-  border: 1px solid rgb(255, 255, 255);
-  background: rgb(255, 255, 255);
-  color: #fff;
-  outline: none;
-}
-.rp-input-min:focus{
-  border-color: rgba(255,255,255,.9);
-  background: rgb(255, 255, 255);
-}
-
- 
-.rp-active{
-  background: #fff !important;
-  color: #ffffff !important;
-   
-}
-
- 
-.rp-bottom-progress{
-  position: fixed;
-  left: 0; right: 0; bottom: 0;
-  z-index: 2147483647;
-  padding: 10px 14px;
-  background: rgba(20,20,20,0.75);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 -6px 20px rgba(0,0,0,.2);
-}
-
-.rp-bottom-row{
-  max-width: 980px;
-  margin: 0 auto 6px auto;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 16px;
-  opacity: .95;
-}
- 
- 
- 
-.rp-clock{
-  position: relative;
-  margin: 8vh auto 2rem;               
-  width: clamp(220px, 45vmin, 380px);  
-  aspect-ratio: 1 / 1;                 
-}
-
- 
-.rp-clock-svg{
-  width: 100%;
-  height: 100%;
-  transform: rotate(-90deg);
-}
- 
-
-  
-
-.rp-clock-time{
-  position: absolute; inset: 0;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 28px; font-weight: 700; color: #ffffff;
-  font-variant-numeric: tabular-nums;
-}
- 
-#rp-clock{
-  inset: 0;
-  display: block;
-  place-items: center;
-  z-index: 999;            
-  pointer-events: none;    
-}
-
- 
-#rp-clock > canvas,
-#rp-clock > svg,
-#rp-clock > .clock-shell{
-  width: clamp(220px, 45vmin, 380px);
-  aspect-ratio: 1 / 1;
-  display: block;
-}
- 
-
-.rp-btn.rp-lg{
-  padding: 10px 18px;
-  font-size: 16px;
-  min-height: 38px;
-  border-radius: 999px;
-}
-
-.rp-input-min{
-  width: 80px;
-  height: 38px;
-  padding: 6px 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,.35);
-  background: rgba(255,255,255,.15);
-  color: #fff;
-  outline: none;
-}
-.rp-input-min:focus{
-  border-color: rgba(255,255,255,.9);
-  background: rgba(255,255,255,.25);
-}
-
-.rp-active{
-  background: #fff !important;
-  color: #111 !important;
-  border-color: transparent !important;
-}
-
- 
-#rp-pause{
-  width: 56px; height: 56px;
-  padding: 0;
-  border-radius: 50%;
-  display: inline-flex; align-items:center; justify-content:center;
-  font-size: 20px; font-weight: 900; line-height: 1;
-  background: #fff; color: #111; border: none;
-  box-shadow: 0 6px 16px rgba(0,0,0,.2);
-}
-#rp-pause.is-paused{
-  background: transparent; color: #fff;
-  border: 2px solid rgba(255,255,255,.9);
-}
-#rp-pause:active{ transform: scale(.98); }
-#rp-bottom-progress{display:none!important;} 
- 
-
- 
- 
-
- 
- 
-.rp-center-actions{
-  align-items: center;
- 
-}
-
- 
-
- 
-
- 
-.rp-clock{
-  position: relative;
-  width: clamp(220px, 45vmin, 380px);
-  aspect-ratio: 1 / 1;
-}
-.rp-clock-svg{ width:100%; height:100%; transform: rotate(-90deg); }
-.rp-clock-bg{ fill:none; stroke: rgba(255,255,255,.15); stroke-width:10; }
-  
-.rp-clock-time{
-  font-size: clamp(44px, 8vmin, 96px);  
-  font-weight: 800;
-  line-height: 1;
-  font-variant-numeric: tabular-nums;  
-}
-
- 
- 
-.rp-input-min{
-  width: 84px; height: 40px; padding: 6px 10px;
-  border-radius: 10px; border:1px solid rgba(255,255,255,.35);
-  background: rgba(255,255,255,.15); color:#fff; outline:none;
-}
-.rp-input-min:focus{ border-color: rgba(255,255,255,.9); background: rgba(255,255,255,.25); }
-
-.rp-btn.rp-lg{ padding: 10px 18px; font-size: 16px; min-height: 40px; border-radius: 999px; }
-
- 
-.rp-pause-btn{
-  width: 56px; height: 56px; padding: 0; border-radius: 50%;
-  display: inline-flex; align-items:center; justify-content:center;
-  font-size: 22px; font-weight: 900; line-height:1;
-  background:#fff; color:#111; border:none; box-shadow:0 6px 16px rgba(0,0,0,.2);
-}
-.rp-pause-btn.is-paused{ background: transparent; color:#fff; border:2px solid rgba(255,255,255,.9); }
-.rp-pause-btn:active{ transform: scale(.98); }
-
- 
-.rp-bottom-progress{ display:none !important; }
  
 .rp-clock-section{
   display: grid;
-  grid-template-columns: minmax(240px, 45vmin) 1fr;  
-  align-items: start;
-  column-gap: clamp(16px, 4vw, 56px);
+   
+  grid-template-columns: minmax(550px, 42vmin) 1fr;
+  column-gap: clamp(28px, 5vw, 84px);
+}
+ 
+.rp-side{ display:grid; gap:14px; justify-items:end; }
+.rp-row{ display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end; }
+.rp-audio--wide{ width:clamp(280px,36vw,440px); }
+
+ 
+.rp-clock{ position:relative; width:min(45vmin,520px); aspect-ratio:1/1; display:grid; place-items:center; }
+.rp-clock-svg{ position:absolute; inset:0; width:100%; height:100%; transform:rotate(-90deg); }
+.rp-clock-bg{ fill:none; stroke:rgba(255,255,255,.15); stroke-width:12; }
+.rp-clock-ring{ fill:none; stroke:url(#clockGrad); stroke-width:12; stroke-linecap:round; transition:stroke-dashoffset .3s ease; }
+.rp-clock-time{ position:absolute; inset:0; display:grid; place-items:center; z-index:1;
+  font-size:clamp(52px,9.5vmin,112px); font-weight:900; color:#fff; font-variant-numeric:tabular-nums; }
+
+ 
+.rp-btn{ background:#fff; color:#111; border:none; border-radius:999px; padding:0 18px; height:56px; font-weight:800; box-shadow:0 6px 16px rgba(0,0,0,.18); }
+.rp-btn:hover{ transform:translateY(-1px); }
+.rp-btn:active{ transform:translateY(0); opacity:.95; }
+.rp-pause-btn{ width:56px; min-width:56px; height:56px; padding:0; border-radius:50%; font-size:22px; font-weight:900; }
+.rp-pause-btn.is-paused{ background:transparent; color:#fff; border:2px solid rgba(255,255,255,.9); }
+
+.rp-input-min{ width:88px; height:56px; border-radius:12px; border:2px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.15); color:#fff; text-align:center; font-weight:700; }
+.rp-input-min:focus{ border-color:rgba(255,255,255,.9); background:rgba(255,255,255,.25); outline:none; }
+
+ 
+.rp-row-url{ display:flex; align-items:center; justify-content:flex-end; gap:12px; flex-wrap:nowrap; overflow-x:auto; }
+.rp-url-input{ width:clamp(280px,36vw,520px); max-width:100%; height:56px; border-radius:12px;
+  border:2px solid rgba(255,255,255,.35); background:#fff; color:#111; padding:0 12px; font-weight:700; }
+
+ 
+.rp-now{ text-align:right; }
+.rp-title{ font-weight:900; font-size:clamp(20px,2.4vw,36px); color:#fff; }
+.rp-sub{ opacity:.9; font-size:clamp(14px,1.6vw,18px); color:#fff; }
+
+ 
+.rp-hero--top{ margin: clamp(12px,3vw,24px) auto 2vh; text-align:center; width:100%;
+  font-size:clamp(48px,12vw,160px); line-height:1.05; font-weight:900; color:#fff; text-shadow:0 2px 18px rgba(0,0,0,.35); }
+
+@media (max-width: 820px){
+  .rp-clock-section{ grid-template-columns:1fr; row-gap:18px; }
+ 
+  .rp-row{ justify-content:center; }
+  .rp-now{ text-align:center; }
+  .rp-audio{ width:92vw; }
+} 
+ 
+.rp-side {
+  width: clamp(360px, 40vw, 600px);
+  justify-self: end;
+}
+.rp-audio--wide, .rp-row-url, .rp-url-input { width: 100%; max-width: 100%; box-sizing: border-box; }
+.rp-row-url { display:flex; gap:12px; flex-wrap:nowrap; overflow-x:auto; }
+
+ 
+body.rp-left .rp-hero--top{
+  text-align: left;
   max-width: 1400px;
-  margin: 2vh auto 6vh;
-  padding: 0 clamp(16px, 4vw, 48px);
-}
-
- 
-.rp-left{ display: grid; justify-items: start; }
-.rp-clock{ width: clamp(220px, 45vmin, 380px); aspect-ratio: 1/1; }
- 
-
- 
- 
-.rp-center-actions{
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
- 
-
- 
-.rp-clock-svg{ width:100%; height:100%; transform: rotate(-90deg); }
-.rp-clock-bg{ fill:none; stroke:rgba(255,255,255,.15); stroke-width:10; }
-.rp-clock-time{
-  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-  font-size: clamp(44px, 8vmin, 96px); font-weight:800; color:#fff; line-height:1; font-variant-numeric: tabular-nums;
-}
-
- 
-  
- 
- 
-.rp-wrap{ overflow: visible !important; }
- 
-.rp-hero{
-  text-shadow: 0 2px 18px rgba(0,0,0,.35);
-  font-weight: 900;
-  letter-spacing: .02em;
-  color: #fff;
-  pointer-events: none;            
-  color:#fff; font-weight:900; letter-spacing:.02em; text-shadow:0 2px 18px rgba(0,0,0,.35);
-
-}
-.rp-hero--top{
-  position: relative;
   margin: clamp(12px,3vw,24px) auto 2vh;
-  text-align: center;
-  width: 100%;
-  font-size: clamp(48px, 12vw, 160px);
-  line-height: 1.05;
-  pointer-events: none;
+  padding-left: clamp(16px, 6vw, 80px);
+  padding-right: clamp(12px, 3vw, 40px);
 }
- 
-.rp-hero--right{
-  top: 50%;
-  right: calc(var(--edge-pad, 24px) + env(safe-area-inset-right));
-  transform: translateY(-50%);
-  margin: 0;
-  width: min(42vw, 820px);         
-  text-align: right;
-  z-index: 5;                      
-  font-size: clamp(56px, 10vw, 160px);
-  line-height: 1.05;
-  opacity: 1;                      
+body.rp-left .rp-clock-section.layout-nice{
+  max-width: none;
+  margin-left: clamp(16px, 6vw, 80px);
+  margin-right: clamp(12px, 3vw, 40px);
+  grid-template-columns: minmax(300px, 38vmin) minmax(420px, 600px);
+  column-gap: clamp(32px, 6vw, 96px);
 }
+body.rp-left .rp-side{ width: min(44vw, 620px); }
 
  
-@media (max-width: 900px){
-  .rp-hero--right{
-    top: 16px;
-    right: calc(12px + env(safe-area-inset-right));
-    transform: none;
-    width: auto;
-    font-size: clamp(28px, 10vw, 48px);
-    line-height: 1.1;
-    text-align: right;
-  }
-}
-
-@media (max-width: 900px){
-  .rp-hero--top{ font-size: clamp(32px, 12vw, 64px); margin-bottom: 1rem; }
-}
-
- 
-.rp-right{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 14px;
-}
-
- 
-.rp-primary-actions{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  justify-content: flex-end;
-  flex-wrap: nowrap;         
-}
-
- 
-.rp-primary-actions > *{
-  flex: 0 0 auto;
-}
-
- 
-.rp-input-min{
-  width: 84px;               
-  min-width: 72px;
-}
-
- 
-.rp-secondary-actions{
- 
-  align-items: center;
-  justify-content: flex-end;    
-  gap: 12px;
-  flex-wrap: nowrap;            
-  white-space: nowrap;          
-  overflow-x: auto;             
-}
-
-.rp-secondary-actions > .rp-btn{
-  flex: 0 0 auto;               
-}
-
-
-.rp-secondary-actions{ margin-top: 10px; }
-
- 
- 
-:root{
-  --page-pad: clamp(16px, 5vw, 56px);
-  --gap: clamp(16px, 4vw, 48px);
-  --row-gap: 14px;
-  --btn-h: 44px;
-  --radius-pill: 999px;
-}
-
- 
-.rp-clock-section.layout-nice{
-  display: grid;
-  grid-template-columns: min(45vmin, 520px) 1fr;
-  align-items: center;
-  column-gap: var(--gap);
-  max-width: 1280px;
-  margin: clamp(12px, 6vh, 72px) auto;
-  padding-inline: var(--page-pad);
-}
-
- 
-.rp-side{ 
-  display: grid; 
-  gap: var(--row-gap); 
-  justify-items: end;           
-}
-.rp-row{ 
-  display: flex; 
-  gap: 12px; 
-  flex-wrap: wrap; 
-  justify-content: flex-end;    
-}
-
- 
-.rp-audio--wide{ 
-  width: clamp(280px, 36vw, 440px);
-  align-self: end;
-}
-
- 
-.rp-now{ text-align: right; }
-.rp-title{ font-weight: 800; font-size: clamp(20px, 2.4vw, 36px); }
-.rp-sub  { opacity: .85;   font-size: clamp(14px, 1.6vw, 18px); }
-
- 
-.rp-btn, .rp-input-min{
-  height: var(--btn-h);
-  padding: 0 18px;
-  border-radius: var(--radius-pill);
-  display: inline-flex; align-items: center; justify-content: center;
-  font-weight: 700;
-}
-
- 
-.rp-btn.rp-strong{ background:#fff; color:#111; border: none; }
-.rp-btn.rp-ghost { background: rgba(255,255,255,.18); color:#fff;
-                   border: 1px solid rgba(255,255,255,.35); }
-
- 
-.rp-input-min{
-  width: 88px;
-  border: 1px solid rgba(255,255,255,.35);
-  background: rgba(255,255,255,.15);
-  color:#fff; outline:none; text-align:center;
-}
-.rp-input-min:focus{
-  border-color: rgba(255,255,255,.9);
-  background: rgba(255,255,255,.25);
-}
-
- 
-#rp-pause{
-  width: 56px; min-width:56px; height: 56px; padding: 0;
-  border-radius: 50%;
-  font-size: 20px; font-weight: 900; line-height: 1;
-  background:#fff; color:#111; border:none;
-  box-shadow: 0 6px 16px rgba(0,0,0,.2);
-}
-#rp-pause.is-paused{
-  background: transparent; color:#fff; border:2px solid rgba(255,255,255,.9);
-}
-
- 
-.rp-clock{
-  position: relative;
-  width: min(45vmin, 520px);
-  aspect-ratio: 1 / 1;
-  margin: 0;                          
-  
-}
-.rp-clock-svg{ width:100%; height:100%; transform: rotate(-90deg); }
-.rp-clock-bg{  fill:none; stroke: rgba(255,255,255,.15); stroke-width: 12; }
- 
-.rp-clock-time{
-  position: absolute; inset: 0;
-  display: grid; place-items: center;
-  font-size: clamp(44px, 8vmin, 96px);
-  font-weight: 800; line-height: 1;
-  font-variant-numeric: tabular-nums;
-  color:#fff;
-}
 
  
 @media (max-width: 820px){
-  .rp-clock-section.layout-nice{ grid-template-columns: 1fr; row-gap: 18px; }
-  .rp-side{ justify-items: center; }
-  .rp-row{ justify-content: center; }
-  .rp-now{ text-align: center; }
-}
- 
-:root{
-  --btn-h: 60px;                  
-}
-
-.rp-btn,
-.rp-btn.rp-ghost,
-.rp-btn.rp-strong,
-#rp-pause,
-#rp-pause.is-paused,
-.rp-pause-btn,
-.rp-pause-btn.is-paused {
-  height: var(--btn-h);
-  min-height: var(--btn-h);
-  padding: 0 22px;
-  border-radius: 999px;
-  background: #fff !important;    
-  color: #111 !important;          
-  border: none !important;
-  box-shadow: 0 6px 16px rgba(0,0,0,.18);
-  font-weight: 1000;
-  font-size: clamp(16px, 1.8vw, 18px);
-  line-height: 1;
-}
-
- 
-#rp-pause,
-#rp-pause.is-paused,
-.rp-pause-btn,
-.rp-pause-btn.is-paused {
-  width: 56px;
-  min-width: 56px;
-  padding: 0;
-  border-radius: 50%;
-}
-
- 
-.rp-btn:hover,
-#rp-pause:hover { transform: translateY(-1px); }
-.rp-btn:active,
-#rp-pause:active { transform: translateY(0); opacity: .95; }
- 
-
- 
-.rp-btn{
-  background:var(--btn-bg) !important;
-  color:var(--btn-text) !important;
-  border:2px solid var(--btn-border) !important;
-  border-radius:999px !important;
-  padding:12px 20px !important;
-  font-weight:800 !important;
-  letter-spacing:.3px;
-  box-shadow:var(--shadow-1) !important;
-  transition:transform .12s ease, box-shadow .2s ease, opacity .2s ease !important;
-}
-.rp-btn:hover{ transform:translateY(-1px); box-shadow:var(--shadow-2) !important; }
-.rp-btn:active{ transform:translateY(0); box-shadow:0 6px 16px rgba(0,0,0,.18) !important; }
-.rp-btn:focus-visible{ outline:none; box-shadow:0 0 0 6px var(--focus-halo), var(--shadow-1) !important; }
-
- 
-.rp-pause-btn{
-  width:64px; height:64px; font-size:24px; font-weight:900;
-}
-
- 
-.rp-input-min{
-  background:#fff !important; color:#111 !important; border:2px solid var(--btn-border) !important;
-  height:44px !important; padding:8px 12px !important; border-radius:12px !important;
-  font-weight:700;
-}
-.rp-input-min:focus{ box-shadow:0 0 0 6px var(--focus-halo); outline:none; }
-
- 
-.rp-center-actions{ row-gap: clamp(18px, 2.4vw, 36px) !important; }
-.rp-tools-row1{ margin-bottom: clamp(18px, 2.4vw, 36px) !important; }
-
- 
-#rp-title{ font-size:clamp(24px, 3.8vw, 44px); font-weight:900; letter-spacing:.5px; }
-#rp-sub{   font-size:clamp(16px, 2.2vw, 22px); opacity:.9; }
-
- 
-.rp-clock-bg{ stroke:var(--clock-bg-stroke) !important; }
-.rp-clock-ring{
-  fill:none;
-  stroke:url(#clockGrad) !important;
-  stroke-width:12 !important;
-  stroke-linecap:round !important;
-  transition: stroke-dashoffset .3s ease;
-}
-
-@keyframes breathe{
-  0%,100%{ filter: drop-shadow(0 0 6px rgba(255,215,226,.25)); }
-  50%   { filter: drop-shadow(0 0 14px rgba(199,201,255,.35)); }
-}
-
- 
-.rp-clock-time{
-  font-size: clamp(52px, 9.5vmin, 112px) !important;
-  font-weight: 900 !important;
-  letter-spacing: .5px;
-}
-
- 
-.rp-audio{
-  background:rgba(255,255,255,.92) !important;
-  border-radius:999px !important;
-  height:40px !important;
-  box-shadow:var(--shadow-1);
-}
-
- 
-@media (max-width: 820px){
-  .rp-row{ justify-content: center; }
-  .rp-btn{ min-width: min(88vw, 420px); width: 100%; }
-  #rp-pause{ width: 60px; min-width:60px; }  
-  .rp-audio{ width: 92vw; }
-}
- 
- 
-.rp-row-2{ margin-bottom: clamp(16px, 3vmin, 28px) !important; }
- 
- 
-
- 
-
-.rp-row-1 .rp-btn{
-  height: clamp(60px, 7.5vmin, 80px) !important;       
-  padding: 0 clamp(22px, 2.4vw, 30px) !important;      
-  font-size: clamp(18px, 2.2vw, 22px) !important;      
- 
-}
-
-.rp-row-1 .rp-input-min{
-  height: clamp(60px, 7.5vmin, 80px) !important;
-  min-width: clamp(96px, 10vmin, 132px) !important;    
-  font-size: clamp(18px, 2.2vw, 22px) !important;
-  padding: 0 16px !important;
-  border-radius: 14px !important;
-}
-
- 
-
-
- 
-.rp-row-1 #rp-pause{
-  width:  clamp(60px, 8vmin, 80px) !important;
-  height: clamp(60px, 8vmin, 80px) !important;
-  font-size: clamp(22px, 3vmin, 28px) !important;
-}
- 
-.rp-row-1{
-  display: flex;
-  flex-wrap: nowrap !important;    
-  white-space: nowrap;             
-  gap: clamp(14px, 1.8vw, 20px);   
-  overflow-x: auto;                
-  -webkit-overflow-scrolling: touch;
-  margin-bottom: clamp(28px, 5vmin, 64px) !important;   
-
-}
-
- 
-.rp-row-1 > *{
-  flex: 0 0 auto !important;
-}
-.rp-clock{ position: relative; }  
-
-.rp-clock-time{
-  position: absolute !important;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  display: block !important;
-  text-align: center;
-  font-size: clamp(44px, 8vmin, 96px);
-  font-weight: 800;
-  color: #fff;
-  font-variant-numeric: tabular-nums;
-  pointer-events: none;  
+  body.rp-left .rp-clock-section.layout-nice{ grid-template-columns: 1fr; }
+  .rp-side{ width: 100%; justify-self: center; }
 }
 
 </style>
