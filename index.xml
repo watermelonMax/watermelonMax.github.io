@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>悉达多</title>
+    <link>https://watermelonmax.github.io/</link>
+    <description>Recent content on 悉达多</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>@example.com (Your name here)</managingEditor>
+    <webMaster>@example.com (Your name here)</webMaster>
+    <copyright>© 2026 Your name here</copyright>
+    <lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>学校里错乱的工作量</title>
+      <link>https://watermelonmax.github.io/essay/2026.1.17/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/essay/2026.1.17/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Machine Learning and Wireless Communications笔记</title>
+      <link>https://watermelonmax.github.io/posts/mlwc/</link>
+      <pubDate>Wed, 06 Aug 2025 12:22:00 +0800</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/posts/mlwc/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/posts/mlwc/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>体制内的一些烂事</title>
+      <link>https://watermelonmax.github.io/essay/sec/</link>
+      <pubDate>Sat, 02 Aug 2025 12:00:17 +1300</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/essay/sec/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>去看眼科</title>
+      <link>https://watermelonmax.github.io/essay/first/</link>
+      <pubDate>Sat, 02 Aug 2025 12:00:17 +1300</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/essay/first/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/essay/first/featured.png" />
+    </item>
+    
+    <item>
+      <title>如何搭建hugo&#43;blowfish</title>
+      <link>https://watermelonmax.github.io/posts/project/</link>
+      <pubDate>Tue, 29 Jul 2025 14:00:17 +0800</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/posts/project/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/posts/project/featured.png" />
+    </item>
+    
+    <item>
+      <title>赵的Tomate</title>
+      <link>https://watermelonmax.github.io/tomatotimer/sec/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/tomatotimer/sec/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/tomatotimer/sec/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>随机音乐与图片</title>
+      <link>https://watermelonmax.github.io/tomatotimer/first/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/tomatotimer/first/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/tomatotimer/first/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>

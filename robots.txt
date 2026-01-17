@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://watermelonmax.github.io/sitemap.xml

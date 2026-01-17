@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on 悉达多</title>
+    <link>https://watermelonmax.github.io/tags/</link>
+    <description>Recent content in Tags on 悉达多</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>@example.com (Your name here)</managingEditor>
+    <webMaster>@example.com (Your name here)</webMaster>
+    <copyright>© 2026 Your name here</copyright>
+    <atom:link href="https://watermelonmax.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+  </channel>
+</rss>
