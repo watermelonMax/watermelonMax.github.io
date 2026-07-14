@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EnglishWordTests on 悉达多</title>
+    <link>http://localhost:1313/englishwordtest/</link>
+    <description>Recent content in EnglishWordTests on 悉达多</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>@example.com (Your name here)</managingEditor>
+    <webMaster>@example.com (Your name here)</webMaster>
+    <copyright>© 2026 Your name here</copyright>
+    <atom:link href="http://localhost:1313/englishwordtest/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/englishwordtest/first/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>http://localhost:1313/englishwordtest/first/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/englishwordtest/first/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>

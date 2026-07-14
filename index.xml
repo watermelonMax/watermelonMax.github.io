@@ -9,7 +9,17 @@
     <managingEditor>@example.com (Your name here)</managingEditor>
     <webMaster>@example.com (Your name here)</webMaster>
     <copyright>© 2026 Your name here</copyright>
-    <lastBuildDate>Sat, 17 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>学校里错乱的工作量</title>
+      <link>https://watermelonmax.github.io/essay/2026.1.17/</link>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 +0000</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/essay/2026.1.17/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Machine Learning and Wireless Communications笔记</title>
@@ -49,6 +59,46 @@
       <guid>https://watermelonmax.github.io/posts/project/</guid>
       <description></description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/posts/project/featured.png" />
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://watermelonmax.github.io/englishwordtest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/englishwordtest/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/englishwordtest/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>  </title>
+      <link>https://watermelonmax.github.io/posts/prompt%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/posts/prompt%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>  </title>
+      <link>https://watermelonmax.github.io/posts/%E8%8B%B1%E8%AF%ADbbc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/posts/%E8%8B%B1%E8%AF%ADbbc/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>C语言程序设计 _ 现代方法 </title>
+      <link>https://watermelonmax.github.io/posts/c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-_-%E7%8E%B0%E4%BB%A3%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/posts/c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-_-%E7%8E%B0%E4%BB%A3%E6%96%B9%E6%B3%95/</guid>
+      <description></description>
+      
     </item>
     
     <item>
