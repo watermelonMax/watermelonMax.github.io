@@ -13,12 +13,12 @@
     
     <item>
       <title></title>
-      <link>http://localhost:1313/englishwordtest/first/</link>
+      <link>http://localhost:1313/englishwordtest/index-1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>@example.com (Your name here)</author>
-      <guid>http://localhost:1313/englishwordtest/first/</guid>
+      <guid>http://localhost:1313/englishwordtest/index-1/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/englishwordtest/first/featured.jpg" />
+      
     </item>
     
   </channel>
