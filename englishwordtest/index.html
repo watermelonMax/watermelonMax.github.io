@@ -827,7 +827,7 @@ let wrongWords = [];   //错题词
 
 //读取普通词库
 
-fetch('/data/words.xlsx')
+fetch('/data/words.xlsx?t=' + Date.now())
 
 .then(response=>response.arrayBuffer())
 
