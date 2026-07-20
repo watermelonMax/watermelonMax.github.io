@@ -1056,22 +1056,31 @@ function test(){
     document
     .getElementById("word-list")
     .innerHTML =
-
+ 
 
     selected
-    .map(item=>{
+    .map((item,index)=>{
 
 
-        // 随机显示英文或者中文
+        let number = index + 1;
+
 
         if(Math.random()<0.5){
 
-            return `<div class="word-card">${item.word}</div>`;
+            return `
+            <div class="word-card">
+            ${number}. ${item.word}
+            </div>
+            `;
 
         }
         else{
 
-            return `<div class="word-card">${item.note}</div>`;
+            return `
+            <div class="word-card">
+            ${number}. ${item.note}
+            </div>
+            `;
 
         }
 
