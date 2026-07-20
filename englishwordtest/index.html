@@ -133,7 +133,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2"
+    "wordCount": "3"
   }]
   </script>
 
@@ -800,20 +800,32 @@ body{
     background-attachment:fixed;
 
 }
+
+#word-count-info{
+
+    font-size:18px;
+
+    color:#555;
+
+    margin-bottom:20px;
+
+}
 </style>
 <div class="word-box">
 <h1>
 英语大比拼
 </h1>
+<div id="word-count-info">
+词库数量：加载中...
+</div>
 <p><input 
 id="word-count"
 type="number"
 value="20"
 min="1"
-max="100"></p>
-<button onclick="test()">
+max="100"><button onclick="test()">
 随机起来！
-</button>
+</button></p>
 <div id="word-list"></div>
 <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 <script>
@@ -849,13 +861,22 @@ fetch('/data/words.xlsx?t=' + Date.now())
 
     words =
     result.map(item=>({
-
+        
         word:String(item.word).trim(),
-
+        
         note:String(item.note).trim()
-
+        
     }))
     .filter(item=>item.word!="undefined" && item.note!="undefined");
+
+
+
+    //显示词库数量
+
+    document
+    .getElementById("word-count-info")
+    .innerHTML =
+    "词库数量：" + words.length + " 个";
 
 
 });
