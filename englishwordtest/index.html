@@ -133,7 +133,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "3"
+    "wordCount": "4"
   }]
   </script>
 
@@ -691,14 +691,15 @@
 
         <div class="article-content max-w-prose mb-20">
           <style>
- 
+/*   表格存在/Users/max/project/watermelonMax/static/data  */
+
 /* 内容区域 */
 
 .word-box{
 
     background:rgba(255,255,255,0.9);
     
-    width:1300px;
+    width:1400px;
     
     padding:40px;
     
@@ -746,19 +747,19 @@ button:hover{
 h1{
     color:#222;
 }
- 
+
 #word-list{
 
     display:grid;
-
-    grid-template-columns:repeat(6,1fr);
-
+    
+    grid-template-columns:repeat(5,1fr);
+    
     gap:15px;
-
+    
     margin-top:60px;
-
+    
     font-size:22px;
-
+    
     color:#111827;
 
 }
@@ -768,14 +769,16 @@ h1{
 .word-card{
 
     background:rgba(255,255,255,0.75);
-
+    
     border-radius:10px;
-
+    
     padding:20px 10px;
-
+    
     min-height:70px;
-
+    
     display:flex;
+
+    flex-direction:column;
 
     align-items:center;
 
@@ -783,20 +786,18 @@ h1{
 
     text-align:center;
 
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
-
 }
 
 body{
 
     font-family:Arial,sans-serif;
-
+    
     background-image:url('/images/1.webp');
-
+    
     background-size:cover;
-
+    
     background-position:center;
-
+    
     background-attachment:fixed;
 
 }
@@ -804,10 +805,21 @@ body{
 #word-count-info{
 
     font-size:18px;
-
+    
     color:#555;
-
+    
     margin-bottom:20px;
+
+}
+.answer{
+
+    margin-top:15px;
+
+    color:#2563eb;
+
+    font-size:18px;
+
+    font-weight:bold;
 
 }
 </style>
@@ -831,9 +843,13 @@ max="100"><button onclick="test()">
 <script>
 
 
- 
-let words = [];        //普通词
-let wrongWords = [];   //错题词
+
+let words = [];
+let wrongWords = [];
+
+
+//保存当前随机出来的单词
+let currentWords = [];
 
 
 
@@ -847,7 +863,7 @@ fetch('/data/words.xlsx?t=' + Date.now())
 
 
     let workbook=XLSX.read(data);
-
+    
     //从 Excel 文件中选择第一个工作表（Sheet）。
     let sheet=
     workbook.Sheets[
@@ -858,7 +874,7 @@ fetch('/data/words.xlsx?t=' + Date.now())
     let result=
     XLSX.utils.sheet_to_json(sheet);
     console.log(result);
-
+    
     words =
     result.map(item=>({
         
@@ -872,7 +888,7 @@ fetch('/data/words.xlsx?t=' + Date.now())
 
 
     //显示词库数量
-
+    
     document
     .getElementById("word-count-info")
     .innerHTML =
@@ -907,7 +923,7 @@ fetch('/data/wrong_words.xlsx')
     XLSX.utils.sheet_to_json(sheet);
 
 
-  
+
 wrongWords =
 [
     ...new Map(
@@ -928,22 +944,22 @@ wrongWords =
 
 
 //点击按钮随机显示 
- 
+
 
 function test(){
 
     if(words.length===0){
-
+    
         alert("普通词库正在加载，请稍等");
-
+    
         return;
-
+    
     }
 
 
 
     // 获取用户需要数量
-
+    
     let count =
     Number(
         document.getElementById("word-count").value
@@ -952,34 +968,34 @@ function test(){
 
 
     // 理论需要错题数量（40%）
-
+    
     let targetWrong = Math.ceil(count * 0.4);
- 
+
 
     // 实际错题数量
-
+    
     let wrongCount;
- 
+     
     if(wrongWords.length < targetWrong){
-
+    
         // 错题不足40%，全部显示
-
+    
         wrongCount = wrongWords.length;
-
+    
     }
-
+    
     else{
-
+    
         // 错题足够，只取40%
-
+    
         wrongCount = targetWrong;
-
+    
     }
 
 
 
     // 普通词补足数量
-
+    
     let normalCount = count - wrongCount;
 
 
@@ -988,7 +1004,7 @@ function test(){
     // ==================
     // 随机错题
     // ==================
-
+    
     let wrongTemp =
     [...wrongWords];
 
@@ -1011,7 +1027,7 @@ function test(){
     // ==================
     // 随机普通词
     // ==================
-
+    
     let normalTemp =
     [...words];
 
@@ -1032,7 +1048,7 @@ function test(){
 
 
     // 合并
-
+    
     let selected =
     [
         ...selectedWrong,
@@ -1043,7 +1059,7 @@ function test(){
 
 
     // 最后整体打乱
-
+    
     selected.sort(
         ()=>Math.random()-0.5
     );
@@ -1052,11 +1068,12 @@ function test(){
 
 
     // 显示
+    currentWords = selected;
 
     document
     .getElementById("word-list")
     .innerHTML =
- 
+
 
     selected
     .map((item,index)=>{
@@ -1066,22 +1083,40 @@ function test(){
 
 
         if(Math.random()<0.5){
-
+    
+         
             return `
             <div class="word-card">
-            ${number}. ${item.word}
-            </div>
-            `;
 
+            ${number}. ${item.word}
+
+            <div class="answer"
+            style="display:none">
+
+            ${item.note}
+
+            </div>
+
+            </div>
+            `;            
+    
         }
         else{
-
+ 
             return `
             <div class="word-card">
-            ${number}. ${item.note}
-            </div>
-            `;
 
+            ${number}. ${item.note}
+
+            <div class="answer"
+            style="display:none">
+
+            ${item.word}
+
+            </div>
+
+            </div>
+            `;    
         }
 
 
@@ -1089,9 +1124,28 @@ function test(){
     .join("");
 
 }
+function showAnswer(){
+
+
+    let answers =
+    document.querySelectorAll(".answer");
+
+
+    answers.forEach(item=>{
+
+
+        item.style.display="block";
+
+
+    });
+
+
+}
 
 </script>
-
+<button onclick="showAnswer()">
+显示正确答案
+</button>
           
           
           
