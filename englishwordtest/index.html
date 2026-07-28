@@ -856,6 +856,19 @@ body{
     font-weight:bold;
 
 }
+.speak-btn{
+
+    background:transparent;
+
+    border:none;
+
+    color:#2563eb;
+
+    font-size:22px;
+
+    padding:2px 5px;
+
+}
 </style>
 <div class="word-box">
 <h1>
@@ -1179,6 +1192,7 @@ document
 
             </div>
 
+       
 
 
             <input
@@ -1273,6 +1287,15 @@ function showAnswer(){
 
 
         }
+        result.innerHTML =      
+        `
+        <button 
+        class="speak-btn"
+        onclick="speak('${item.word}')">
+        ▶️
+        </button>
+        `
+        + answer ;
 
 
     });
@@ -1321,6 +1344,26 @@ function shuffle(array){
 
 
     return array;
+
+}
+function speak(word){
+
+
+    let speech =
+    new SpeechSynthesisUtterance(word);
+
+
+    speech.lang="en-US";
+
+
+    speech.rate= 1;
+
+
+    speech.pitch=1;
+
+
+    window.speechSynthesis.speak(speech);
+
 
 }
 </script>
