@@ -133,7 +133,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "4"
+    "wordCount": "6"
   }]
   </script>
 
@@ -718,7 +718,7 @@
 
 button{
 
-    padding:12px 30px;
+    padding:10px 30px;
     
     font-size:20px;
     
@@ -726,11 +726,13 @@ button{
     
     border:none;
     
-    border-radius:8px;
+    border-radius:3px;
     
     background:#4a90e2;
     
     color:white;
+
+    margin-top:5px;
 
 }
 
@@ -747,7 +749,13 @@ button:hover{
 h1{
     color:#222;
 }
-
+label{
+    font-size:22px;
+    color:#222;
+    gap:15px;
+    margin-top:60px;
+    
+}
 #word-list{
 
     display:grid;
@@ -811,13 +819,41 @@ body{
     margin-bottom:20px;
 
 }
-.answer{
+ 
+.seed-input{
+
+    width:100px;
+
+    padding:12px;
+
+    font-size:20px;
+
+    border-radius:6px;
+
+    border:1px solid #aaa;
+
+}
+
+.answer-input{
+
+    width:80%;
+
+    padding:8px;
+
+    font-size:18px;
+
+    border-radius:6px;
+
+    border:1px solid #aaa;
+
+}
+.result{
 
     margin-top:15px;
 
     color:#2563eb;
 
-    font-size:18px;
+    font-size:20px;
 
     font-weight:bold;
 
@@ -830,14 +866,26 @@ body{
 <div id="word-count-info">
 词库数量：加载中...
 </div>
-<p><input 
+<label>
+随机种子：
+</label>
+<input 
+id="seed"
+type="number"
+class="seed-input"
+placeholder="20">
+<label>
+单词数量：
+</label>
+<input 
 id="word-count"
 type="number"
 value="20"
 min="1"
-max="100"><button onclick="test()">
+max="100"> 
+<button onclick="test()">
 随机起来！
-</button></p>
+</button>
 <div id="word-list"></div>
 <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 <script>
@@ -850,7 +898,8 @@ let wrongWords = [];
 
 //保存当前随机出来的单词
 let currentWords = [];
-
+//随机种子
+let seed = null;
 
 
 //读取普通词库
@@ -957,7 +1006,29 @@ function test(){
     }
 
 
+    //读取随机种子
 
+    let seedValue =
+    document
+    .getElementById("seed")
+    .value;
+
+
+
+    if(seedValue){
+
+        seed =
+        Number(seedValue);
+
+    }
+    else{
+
+        //没有输入种子，使用当前时间
+
+        seed =
+        Date.now()%100000;
+
+    }   
     // 获取用户需要数量
     
     let count =
@@ -1006,11 +1077,8 @@ function test(){
     // ==================
     
     let wrongTemp =
-    [...wrongWords];
-
-
-    wrongTemp.sort(
-        ()=>Math.random()-0.5
+    shuffle(
+        [...wrongWords]
     );
 
 
@@ -1029,11 +1097,8 @@ function test(){
     // ==================
     
     let normalTemp =
-    [...words];
-
-
-    normalTemp.sort(
-        ()=>Math.random()-0.5
+    shuffle(
+        [...words]
     );
 
 
@@ -1060,88 +1125,206 @@ function test(){
 
     // 最后整体打乱
     
-    selected.sort(
-        ()=>Math.random()-0.5
-    );
+    selected =
+    shuffle(selected);
 
 
 
 
-    // 显示
-    currentWords = selected;
-
-    document
-    .getElementById("word-list")
-    .innerHTML =
+     
 
 
-    selected
-    .map((item,index)=>{
+currentWords = selected;
 
 
-        let number = index + 1;
+document
+.getElementById("word-list")
+.innerHTML =
 
 
-        if(Math.random()<0.5){
-    
-         
+        selected
+        .map((item,index)=>{
+
+
+            let number=index+1;
+
+
+            // 随机显示英文或者中文
+
+            let showEnglish = seededRandom()<0.5;
+
+
+            let question;
+
+
+            if(showEnglish){
+
+                question=item.word;
+
+            }
+            else{
+
+                question=item.note;
+
+            }
+
+
+
             return `
+
             <div class="word-card">
 
-            ${number}. ${item.word}
 
-            <div class="answer"
-            style="display:none">
+            <div class="question">
 
-            ${item.note}
+            ${number}. ${question}
 
             </div>
 
+
+
+            <input
+
+            class="answer-input"
+
+            id="answer-${index}"
+
+            placeholder="请输入答案">
+
+
+
+            <div
+
+            class="result"
+
+            id="result-${index}">
+
             </div>
-            `;            
-    
-        }
-        else{
- 
-            return `
-            <div class="word-card">
 
-            ${number}. ${item.note}
-
-            <div class="answer"
-            style="display:none">
-
-            ${item.word}
 
             </div>
 
-            </div>
-            `;    
-        }
+
+            `;
 
 
-    })
-    .join("");
+        })
+        .join(""); 
 
 }
+ 
 function showAnswer(){
 
 
-    let answers =
-    document.querySelectorAll(".answer");
+    currentWords.forEach((item,index)=>{
 
 
-    answers.forEach(item=>{
+        let userAnswer =
+        document
+        .getElementById(
+            "answer-"+index
+        )
+        .value
+        .trim();
 
 
-        item.style.display="block";
+
+        let result =
+        document
+        .getElementById(
+            "result-"+index
+        );
+
+
+
+        let answer;
+
+
+        // 判断输入方向
+
+        let question =
+        document
+        .querySelectorAll(".question")
+        [index]
+        .innerText;
+
+        answer=item.note;
+
+        if(question.includes(item.word)){
+
+
+            //显示英文，需要回答中文
+
+            answer=item.note;
+
+
+            result.innerHTML= answer;
+
+
+        }
+
+        else{
+
+
+            //显示中文，需要回答英文
+
+            answer=item.word;
+
+
+            result.innerHTML= answer;
+
+
+        }
 
 
     });
 
 
 }
+function seededRandom(){
 
+
+    seed =
+    (seed * 9301 + 49297) % 233280;
+
+
+    return seed / 233280;
+
+
+}
+function shuffle(array){
+
+
+    for(
+        let i=array.length-1;
+        i>0;
+        i--
+    ){
+
+
+        let j =
+        Math.floor(
+            seededRandom()*(i+1)
+        );
+
+
+
+        [
+            array[i],
+            array[j]
+        ] =
+        [
+            array[j],
+            array[i]
+        ];
+
+
+    }
+
+
+    return array;
+
+}
 </script>
 <button onclick="showAnswer()">
 显示正确答案
