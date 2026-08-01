@@ -1021,7 +1021,28 @@ body{
     }
 
 }
+
+.robot{
+
+    position:absolute;
+
+    right:40px;
+
+    bottom:20px;
+
+}
+
+
+.robot lottie-player{
+
+    width:150px;
+
+    height:150px;
+
+}
 </style>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 <div class="word-box">
 <div class="pomodoro">
 <div id="timer">
@@ -1069,7 +1090,18 @@ max="100">
 随机起来！
 </button>
 <div id="word-list"></div>
-<script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+<div class="robot">
+
+<lottie-player
+src="/images/WalkingRobot.json"
+background="transparent"
+speed="1"
+style="width:150px;height:150px"
+loop
+autoplay>
+</lottie-player>
+
+</div>
 <script>
 
 
@@ -1648,6 +1680,7 @@ function resetTimer(){
 <button onclick="showAnswer()">
 显示正确答案
 </button>
+
           
           
           
