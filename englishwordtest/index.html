@@ -133,7 +133,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "6"
+    "wordCount": "10"
   }]
   </script>
 
@@ -715,6 +715,8 @@ input{
     
     text-align:center;
 
+    position:relative;
+
 }
 
 
@@ -751,7 +753,11 @@ button:hover{
 /* 单词 */
 
 h1{
+
     color:#222;
+
+    margin-top:80px;
+
 }
 label{
     font-size:22px;
@@ -869,8 +875,173 @@ body{
     padding:2px 5px;
 
 }
+.pomodoro{
+
+    position:absolute;
+
+    top:30px;
+
+    right:30px;
+
+
+    width:260px;
+
+    padding:20px;
+
+
+    /* 半透明玻璃 */
+
+    background:rgba(255,255,255,0.35);
+
+
+    /* 毛玻璃效果 */
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:20px;
+
+
+    /* 悬浮阴影 */
+
+    box-shadow:0 20px 50px rgba(0,0,0,0.3);
+
+
+    z-index:1000;
+
+
+    text-align:center;
+
+
+    /* 浮动动画 */
+
+    animation:float 3s ease-in-out infinite;
+    
+}
+#timer{
+
+
+    font-size:70px;
+
+    font-weight:bold;
+
+
+    color:white;
+
+
+    text-shadow:
+
+    0 3px 10px rgba(0,0,0,0.4);
+
+
+}
+
+
+.progress{
+
+
+    height:6px;
+
+    background:
+
+    rgba(9, 8, 8, 0.3);
+
+
+    border-radius:5px;
+
+
+    margin:15px 0;
+
+    rgba(0, 0, 0, 0.3);
+
+    transform-origin:left;
+
+
+}
+.progress{
+    display:flex;
+    justify-content:flex-end;
+}
+
+#progress-bar{
+
+
+    height:100%;
+
+
+    width:100%;
+
+
+    background:#ffffff;
+
+
+    border-radius:5px;
+
+    rgba(148, 19, 19, 0);
+
+
+}
+
+.timer-buttons button{
+
+
+    padding:8px 12px;
+
+
+    font-size:18px;
+
+
+    background:
+
+    rgba(0, 0, 0, 0.3);
+
+
+}
+@keyframes float{
+
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-4px);
+
+    }
+
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
 </style>
 <div class="word-box">
+<div class="pomodoro">
+<div id="timer">
+25:00
+</div>
+<div class="progress">
+    <div id="progress-bar"></div>
+</div>
+<div class="timer-buttons">
+<button onclick="startTimer()">
+▶
+</button>
+<button onclick="pauseTimer()">
+Ⅱ
+</button>
+<button onclick="resetTimer()">
+↻
+</button>
+</div>
+</div>
 <h1>
 英语大比拼
 </h1>
@@ -911,8 +1082,7 @@ let wrongWords = [];
 let currentWords = [];
 //随机种子
 let seed = null;
-
-
+ 
 //读取普通词库
 
 fetch('/data/words.xlsx?t=' + Date.now())
@@ -1282,7 +1452,6 @@ function showAnswer(){
 
             answer=item.word;
 
-
             result.innerHTML= answer;
 
 
@@ -1366,6 +1535,115 @@ function speak(word){
 
 
 }
+
+
+let totalSeconds=25*60;
+let startSeconds=25*60;
+function updateTimer(){
+
+
+    let min=Math.floor(totalSeconds/60);
+
+    let sec=totalSeconds%60;
+
+
+    document.getElementById("timer").innerHTML=
+
+    min+":"+
+    String(sec).padStart(2,"0");
+
+
+
+    let percent =
+    totalSeconds/startSeconds*100;
+
+
+    document
+    .getElementById("progress-bar")
+    .style.width =
+    percent+"%";
+
+
+}
+let timer = null;
+
+
+//开始计时
+
+function startTimer(){
+
+
+    if(timer){
+
+        return;
+
+    }
+
+
+    timer = setInterval(()=>{
+
+
+        if(totalSeconds > 0){
+
+
+            totalSeconds--;
+
+            updateTimer();
+
+
+        }
+        else{
+
+
+            clearInterval(timer);
+
+            timer=null;
+
+            alert("🍅 番茄时间结束！");
+
+        }
+
+
+    },1000);
+
+
+}
+
+
+
+//暂停
+
+function pauseTimer(){
+
+
+    clearInterval(timer);
+
+    timer=null;
+
+
+}
+
+
+
+//重置
+
+function resetTimer(){
+
+
+    clearInterval(timer);
+
+    timer=null;
+
+
+    totalSeconds=startSeconds;
+
+
+    updateTimer();
+
+
+}
+
+
 </script>
 <button onclick="showAnswer()">
 显示正确答案
