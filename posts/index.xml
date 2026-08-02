@@ -2,61 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>目录 on 悉达多</title>
-    <link>https://watermelonmax.github.io/posts/</link>
+    <link>http://localhost:64614/posts/</link>
     <description>Recent content in 目录 on 悉达多</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>@example.com (Your name here)</managingEditor>
     <webMaster>@example.com (Your name here)</webMaster>
     <copyright>© 2026 Your name here</copyright>
-    <lastBuildDate>Wed, 06 Aug 2025 12:22:00 +0800</lastBuildDate><atom:link href="https://watermelonmax.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Aug 2025 12:22:00 +0800</lastBuildDate><atom:link href="http://localhost:64614/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Machine Learning and Wireless Communications笔记</title>
-      <link>https://watermelonmax.github.io/posts/mlwc/</link>
+      <link>http://localhost:64614/posts/mlwc/</link>
       <pubDate>Wed, 06 Aug 2025 12:22:00 +0800</pubDate>
       <author>@example.com (Your name here)</author>
-      <guid>https://watermelonmax.github.io/posts/mlwc/</guid>
+      <guid>http://localhost:64614/posts/mlwc/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/posts/mlwc/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:64614/posts/mlwc/featured.jpg" />
     </item>
     
     <item>
       <title>如何搭建hugo&#43;blowfish</title>
-      <link>https://watermelonmax.github.io/posts/project/</link>
+      <link>http://localhost:64614/posts/project/</link>
       <pubDate>Tue, 29 Jul 2025 14:00:17 +0800</pubDate>
       <author>@example.com (Your name here)</author>
-      <guid>https://watermelonmax.github.io/posts/project/</guid>
+      <guid>http://localhost:64614/posts/project/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/posts/project/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:64614/posts/project/featured.png" />
     </item>
     
     <item>
       <title>  </title>
-      <link>https://watermelonmax.github.io/posts/prompt%E5%AD%A6%E4%B9%A0/</link>
+      <link>http://localhost:64614/posts/prompt%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>@example.com (Your name here)</author>
-      <guid>https://watermelonmax.github.io/posts/prompt%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>http://localhost:64614/posts/prompt%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>  </title>
-      <link>https://watermelonmax.github.io/posts/%E8%8B%B1%E8%AF%ADbbc/</link>
+      <link>http://localhost:64614/posts/%E8%8B%B1%E8%AF%ADbbc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>@example.com (Your name here)</author>
-      <guid>https://watermelonmax.github.io/posts/%E8%8B%B1%E8%AF%ADbbc/</guid>
+      <guid>http://localhost:64614/posts/%E8%8B%B1%E8%AF%ADbbc/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>C语言程序设计 _ 现代方法 </title>
-      <link>https://watermelonmax.github.io/posts/c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-_-%E7%8E%B0%E4%BB%A3%E6%96%B9%E6%B3%95/</link>
+      <link>http://localhost:64614/posts/c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-_-%E7%8E%B0%E4%BB%A3%E6%96%B9%E6%B3%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>@example.com (Your name here)</author>
-      <guid>https://watermelonmax.github.io/posts/c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-_-%E7%8E%B0%E4%BB%A3%E6%96%B9%E6%B3%95/</guid>
+      <guid>http://localhost:64614/posts/c%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1-_-%E7%8E%B0%E4%BB%A3%E6%96%B9%E6%B3%95/</guid>
       <description></description>
       
     </item>
