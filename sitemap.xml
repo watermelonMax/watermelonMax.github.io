@@ -51,6 +51,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://watermelonmax.github.io/englishstory/story1/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://watermelonmax.github.io/englishwordtest/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -72,6 +77,11 @@
   </url>
   <url>
     <loc>https://watermelonmax.github.io/tomatotimer/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://watermelonmax.github.io/englishstory/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
