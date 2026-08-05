@@ -1412,7 +1412,33 @@ function test(){
     
     selected =
     shuffle(selected);
+    // 去除同一个单词的中英文重复
+    let usedWords = new Set();
+    let usedNotes = new Set();
 
+
+    selected = selected.filter(item=>{
+
+
+        if(
+            usedWords.has(item.word) ||
+            usedNotes.has(item.note)
+        ){
+
+            return false;
+
+        }
+
+
+        usedWords.add(item.word);
+
+        usedNotes.add(item.note);
+
+
+        return true;
+
+
+    });
 
 
 
