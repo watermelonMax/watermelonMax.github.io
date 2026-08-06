@@ -9,7 +9,17 @@
     <managingEditor>@example.com (Your name here)</managingEditor>
     <webMaster>@example.com (Your name here)</webMaster>
     <copyright>© 2026 Your name here</copyright>
-    <lastBuildDate>Wed, 05 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/englishstory/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://watermelonmax.github.io/englishstory/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The Silence Beyond the Droplet</title>
+      <link>https://watermelonmax.github.io/englishstory/story3/</link>
+      <pubDate>Thu, 06 Aug 2026 00:00:00 +0000</pubDate>
+      <author>@example.com (Your name here)</author>
+      <guid>https://watermelonmax.github.io/englishstory/story3/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://watermelonmax.github.io/englishstory/story3/featured.jpg" />
+    </item>
     
     <item>
       <title>The Last Pension Recipient</title>
