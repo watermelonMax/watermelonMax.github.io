@@ -133,7 +133,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "8"
+    "wordCount": "14"
   }]
   </script>
 
@@ -912,7 +912,7 @@ body{
 
     position:absolute;
 
-    top:30px;
+    top:-30px;
 
     right:30px;
 
@@ -948,16 +948,21 @@ body{
 .timer-buttons button{
 
 
-    padding:8px 12px;
-
+    padding:6px 15px;
 
     font-size:18px;
+
+    margin:6px;
+
+    border-radius:10px;
 
 
     background:
 
     rgba(0, 0, 0, 0.3);
 
+ 
+    
 
 }
 @keyframes float{
@@ -1162,30 +1167,163 @@ body{
 
 }
  
+.answer-area{
 
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+
+
+.speak-btn{
+
+
+    background:transparent;
+
+    border:none;
+
+
+    font-size:24px;
+
+
+    cursor:pointer;
+
+
+    padding:0;
+
+
+    color:#2563eb;
+
+
+}
+
+
+.speak-btn:hover{
+
+    transform:scale(1.15);
+
+}
  
+.test-status-panel{
+
+
+    position:fixed;
+
+
+    top:30px;
+
+
+    left:30px;
+
+
+    width:180px;
+
+
+    padding:15px;
+
+
+    background:
+
+    rgba(255,255,255,0.35);
+
+
+    backdrop-filter:blur(15px);
+
+
+    border-radius:20px;
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,0.2);
+
+
+    z-index:999;
+
+
+    text-align:center;
+
+
+    font-size:22px;
+
+
+}
+
+
+
+.time-box{
+
+    margin-bottom:10px;
+
+    font-weight:bold;
+
+}
+
+
+
+.voice-box{
+
+    font-size:20px;
+    color:#2563eb;
+}
 
  
 </style>
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
 <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 <div class="word-box">
+<div class="test-status-panel">
+<div class="time-box">
+<p>⏱</p>
+<span id="timer">
+00:00
+</span>
+<div class="timer-buttons">
+<button onclick="pauseTimer()">
+⏸
+</button>
+<button onclick="resumeTimer()">
+▶
+</button>
+</div>
+</div>
+<div class="voice-box">
+<p>语音剩余：
+<span id="voice-left">
+5
+</span></p>
+</div>
+</div> 
 <div class="title-area">
  <button onclick="changeMode()" id="mode-btn">
 进入模拟考试模式
 </button><h1>
 英语大比拼
 </h1>
-<div class="countdown">
-<span id="timer">
-00:00
-</span>
-</div>
 </div>
 <div id="word-count-info">
 词库数量：加载中...
 </div>
 <div class="control-area">
+<div id="voice-area" class="input-group">
+<label>
+语音次数：
+</label>
+<p><input
+id="voice-limit"
+type="number"
+value="5"
+min="0"
+max="20"></p>
+</div>
 <div id="seed-area" class="input-group" style="display:flex;">
 <label>
 随机种子：
@@ -1227,7 +1365,9 @@ autoplay>
 <script>
 
 
+let voiceLimit = 5;
 
+let voiceUsed = 0;
 let words = [];
 let wrongWords = [];
 
@@ -1367,6 +1507,21 @@ function changeMode(){
 
 
 function test(){
+    voiceLimit =
+    Number(
+    document.getElementById("voice-limit").value
+    );
+
+
+    voiceUsed = 0;
+
+
+    // 更新右上角显示
+
+    document
+    .getElementById("voice-left")
+    .innerHTML =
+    voiceLimit;
     timeOver=false;
     if(words.length===0){
     
@@ -1594,13 +1749,27 @@ document
        
 
 
-            <input
+        <div class="answer-area">
 
-            class="answer-input"
 
-            id="answer-${index}"
+        <button
+        class="speak-btn"
+        id="speak-${index}"
+        onclick="speak('${item.word}',${index})">
+        🔊
+        </button>
 
-            placeholder="请输入答案">
+
+        <input
+
+        class="answer-input"
+
+        id="answer-${index}"
+
+        placeholder="请输入答案">
+
+
+        </div>
 
 
 
@@ -1685,15 +1854,7 @@ function showAnswer(){
 
 
         }
-        result.innerHTML =      
-        `
-        <button 
-        class="speak-btn"
-        onclick="speak('${item.word}')">
-        ▶️
-        </button>
-        `
-        + answer ;
+        result.innerHTML =  answer ;
 
 
     });
@@ -1759,7 +1920,52 @@ function shuffle(array){
     return array;
 
 }
-function speak(word){
+function speak(word,index){
+
+
+
+    if(voiceUsed>=voiceLimit){
+
+        alert("语音提示次数已用完");
+
+        return;
+
+    }
+
+
+
+    voiceUsed++;
+
+
+
+    // 更新固定状态栏
+
+    document
+    .getElementById("voice-left")
+    .innerHTML =
+    voiceLimit-voiceUsed;
+
+
+
+    // 模拟考试扣时间
+
+    if(mode==="exam"){
+
+
+        totalSeconds -= 5;
+
+
+        if(totalSeconds < 0){
+
+            totalSeconds=0;
+
+        }
+
+
+        updateCountdown();
+
+    }
+
 
 
     let speech =
@@ -1768,23 +1974,20 @@ function speak(word){
 
     speech.lang="en-US";
 
-
-    speech.rate= 1;
-
-
-    speech.pitch=1;
+    speech.rate=1;
 
 
     window.speechSynthesis.speak(speech);
 
 
 }
-
  
 
 let timer=null;
 
 let totalSeconds=0;
+
+let isPaused=false;
 
 
 
@@ -1796,56 +1999,73 @@ function startCountdown(seconds){
 
     totalSeconds=seconds;
 
+    isPaused=false;
+
 
     updateCountdown();
-
 
 
     timer=setInterval(()=>{
 
 
-        totalSeconds--;
+        if(!isPaused){
 
 
-        updateCountdown();
+            totalSeconds--;
+
+            updateCountdown();
 
 
-
-    if(totalSeconds<=0){
-
-
-        clearInterval(timer);
-
-        timer=null;
+            if(totalSeconds<=0){
 
 
-        timeOver=true;
+                clearInterval(timer);
+
+                timer=null;
 
 
-        // 禁止所有输入
-
-        document
-        .querySelectorAll(".answer-input")
-        .forEach(input=>{
-
-            input.disabled=true;
-
-            input.placeholder="时间结束";
-
-        });
+                timeOver=true;
 
 
+                document
+                .querySelectorAll(".answer-input")
+                .forEach(input=>{
 
-        alert("⏰ 测试时间结束！");
+                    input.disabled=true;
 
-    }
+                    input.placeholder="时间结束";
+
+                });
+
+
+            }
+
+
+        }
 
 
     },1000);
 
 
 }
+function pauseTimer(){
 
+
+    isPaused=true;
+
+
+}
+function resumeTimer(){
+
+
+    if(totalSeconds>0){
+
+        isPaused=false;
+
+    }
+
+
+}
 
 
 function updateCountdown(){
