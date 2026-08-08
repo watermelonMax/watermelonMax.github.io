@@ -1264,6 +1264,7 @@ body{
     margin-bottom:10px;
 
     font-weight:bold;
+    color:#2563eb;
 
 }
 
@@ -1282,16 +1283,16 @@ body{
 <div class="word-box">
 <div class="test-status-panel">
 <div class="time-box">
-<p>⏱</p>
+<p>加油！</p>
 <span id="timer">
 00:00
 </span>
 <div class="timer-buttons">
-<button onclick="pauseTimer()">
-⏸
-</button>
 <button onclick="resumeTimer()">
 ▶
+</button>
+<button onclick="pauseTimer()">
+⏸
 </button>
 </div>
 </div>
@@ -1324,7 +1325,7 @@ value="5"
 min="0"
 max="20"></p>
 </div>
-<div id="seed-area" class="input-group" style="display:flex;">
+<div id="seed-area" class="input-group" style="display:none;">
 <label>
 随机种子：
 </label>
@@ -2101,6 +2102,22 @@ function goTop(){
     });
 
 }
+
+window.onload=function(){
+
+    document
+    .getElementById("seed-area")
+    .style.display="none";
+
+
+    document
+    .getElementById("mode-btn")
+    .innerHTML="进入模拟考试模式";
+
+
+    mode="self";
+
+};
 </script>
 <button onclick="showAnswer()">
 显示正确答案
