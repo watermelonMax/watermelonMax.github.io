@@ -1479,45 +1479,80 @@ function changeMode(){
     document.getElementById("seed-area");
 
 
+    let voiceArea =
+    document.getElementById("voice-area");
+
+
     if(mode==="self"){
+
 
         //进入模拟考试
 
         mode="exam";
 
+
         btn.innerHTML="返回自测模式";
 
+
         seedArea.style.display="flex";
+
+
+        voiceArea.style.display="none";
 
 
     }
     else{
 
-        //返回自测
+
+        //返回自测模式
 
         mode="self";
 
+
         btn.innerHTML="进入模拟考试模式";
+
 
         seedArea.style.display="none";
 
+
+        voiceArea.style.display="flex";
+
+
     }
+
 
 }
 //点击按钮随机显示 
 
-
 function test(){
-    voiceLimit =
+
+
+    let count =
     Number(
-    document.getElementById("voice-limit").value
+    document.getElementById("word-count").value
     );
 
 
-    voiceUsed = 0;
+    if(mode==="exam"){
+
+        //考试模式：自动计算
+        voiceLimit =
+        Math.floor(count / 10);
+
+    }
+    else{
+
+        //自测模式：读取输入框
+        voiceLimit =
+        Number(
+        document.getElementById("voice-limit").value
+        );
+
+    }
 
 
-    // 更新右上角显示
+    voiceUsed=0;
+
 
     document
     .getElementById("voice-left")
@@ -1562,12 +1597,7 @@ else{
 
 
 }  
-    // 获取用户需要数量
-    
-    let count =
-    Number(
-        document.getElementById("word-count").value
-    );
+ 
 
 // 根据单词数量计算时间
 
