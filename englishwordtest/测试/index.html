@@ -2156,36 +2156,7 @@ window.onload=function(){
 
 };
 
-// 注册 Service Worker
-if("serviceWorker" in navigator){
-
-    window.addEventListener(
-        "load",
-        ()=>{
-
-            navigator
-            .serviceWorker
-            .register("/sw.js")
-            .then(()=>{
-
-                console.log(
-                    "Service Worker 注册成功"
-                );
-
-            })
-            .catch(error=>{
-
-                console.error(
-                    "Service Worker 注册失败",
-                    error
-                );
-
-            });
-
-        }
-    );
-
-}
+ 
 </script>
 <button onclick="showAnswer()">
 显示正确答案
