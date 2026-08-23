@@ -848,6 +848,18 @@ align-items:center;
 
 }
 
+.letter.used{
+
+    text-decoration:line-through;
+
+    text-decoration-color:#facc15;
+
+    text-decoration-thickness:4px;
+
+    opacity:0.45;
+
+}
+
 </style>
 <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 <div class="box">
@@ -972,13 +984,7 @@ item.word
 .forEach(c=>{
 
 
-if(!letters.includes(c)){
-
-
 letters.push(c);
-
-
-}
 
 
 });
@@ -997,10 +1003,12 @@ document
 .innerHTML =
 
 letters
-.map(c=>{
+.map((c,index)=>{
 
 return `
-<span class="letter">
+<span 
+class="letter"
+id="letter-${index}">
 ${c}
 </span>
 `
@@ -1034,11 +1042,30 @@ placeholder="第${index+1}个单词">
 })
 .join("");
 
+// 添加输入监听
+setInputListener();
 
 
 }
 
+function setInputListener(){
 
+
+document
+.querySelectorAll(".spell-input")
+.forEach(input=>{
+
+
+input.addEventListener(
+"input",
+updateLetters
+);
+
+
+});
+
+
+}
 
 function showHints(){
 
@@ -1075,48 +1102,7 @@ ${item.note}
 
 }
 
-function checkAnswer(){
-
-
-let correct=0;
-
-
-selectedWords.forEach((item,index)=>{
-
-
-let answer=
-
-document
-.getElementById(
-"answer-"+index
-)
-.value
-.trim()
-.toLowerCase();
-
-
-
-if(answer===item.word.toLowerCase()){
-
-
-correct++;
-
-
-}
-
-
-});
-
-
-
-document
-.getElementById("result")
-.innerHTML=
-
-"正确："+correct+"/3";
-
-
-}
+ 
 
 function checkAnswer(){
 
@@ -1174,14 +1160,91 @@ ${item.word}
 document
 .getElementById("result")
 .innerHTML=
-
-"正确："+correct+"/3"
-+
 result;
 
 
 }
+function updateLetters(){
 
+
+let used=[];
+
+
+// 收集用户已经输入的所有字母
+
+document
+.querySelectorAll(".spell-input")
+.forEach(input=>{
+
+
+input.value
+.toLowerCase()
+.replace(/\s+/g,"")
+.split("")
+.forEach(c=>{
+
+used.push(c);
+
+});
+
+
+});
+
+
+
+
+// 先恢复所有字母
+
+document
+.querySelectorAll(".letter")
+.forEach(letter=>{
+
+
+letter.classList.remove("used");
+
+
+});
+
+
+
+
+// 一个字母只能消耗一次
+
+let temp=[...used];
+
+
+
+document
+.querySelectorAll(".letter")
+.forEach(letter=>{
+
+
+let c =
+letter.innerText;
+
+
+let index =
+temp.indexOf(c);
+
+
+
+if(index!==-1){
+
+
+letter.classList.add("used");
+
+
+temp.splice(index,1);
+
+
+}
+
+
+
+});
+
+
+}
 </script>
           
           
