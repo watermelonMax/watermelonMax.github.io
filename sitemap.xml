@@ -105,6 +105,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://watermelonmax.github.io/englishwordtest/%E5%8D%95%E8%AF%8D%E6%B8%B8%E6%88%8F/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://watermelonmax.github.io/tomatotimer/sec/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
