@@ -105,6 +105,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://watermelonmax.github.io/englishwordtest/%E4%BE%8B%E5%8F%A5%E6%B5%8B%E8%AF%95/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://watermelonmax.github.io/englishwordtest/%E5%8D%95%E8%AF%8D%E6%B8%B8%E6%88%8F/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
