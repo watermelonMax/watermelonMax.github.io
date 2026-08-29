@@ -897,7 +897,7 @@ let currentWord=null;
 
 
 
-fetch('/data/words_test.xlsx?t='+Date.now())
+fetch('/data/words.xlsx?t='+Date.now())
 
 
 .then(response=>response.arrayBuffer())
@@ -932,8 +932,8 @@ result.map(item=>({
     answer:
     String(item.sentence_answer).trim(),
 
-    sentence:
-    String(item.sentence).trim(),
+    sentence:String(item.sentence || "").trim()
+
 
     sentence_cn:
     String(item.sentence_cn).trim()
